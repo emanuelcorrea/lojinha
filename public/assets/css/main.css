@@ -1,0 +1,862 @@
+/*todo Extras */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+img::selection {
+    background-color: transparent;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section .container {
+    max-width: 1260px;
+}
+
+::selection {
+    background-color: #56cfc5;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+/*todo ========================  */
+
+/*! Atendimento */
+
+div.information {
+    margin-top: 10px;
+    height: 40px;
+}
+
+div.information div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+div.information div.container  a {
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+}
+
+div.information div.container div.atendimento ul {
+    display: flex;
+    list-style: none;
+}
+
+div.information div.container div.atendimento ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+div.information div.container div.atendimento ul li:not(:last-child) {
+    border-right: 1px solid rgb(68, 68, 68);
+}
+
+/*! ==================== */
+
+/*! Menu */
+
+header.menu {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    z-index: 9999;
+}
+
+header.menu::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: #56cfc5;
+    z-index: 1;
+    display: block;
+}
+
+header.menu div.container,
+div.menu div.submenu div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/** Logo */
+header.menu div.container div.logo h1 {
+    font-family: 'Roboto';
+    color: rgb(68, 68, 68);
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    text-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
+/** Campo de pesquisa */
+header.menu div.container div.input-search {
+    display: flex;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.144);
+    border-radius: 3px;
+}
+
+header.menu div.container div.input-search input[type='text'] {
+    padding-left: 10px;
+    color: #76bbb5;
+    font-size: 16px;
+    border: none;
+    height: 35px;
+    width: 670px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    outline: none;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
+header.menu div.container div.input-search input[type='text']::placeholder {
+    outline: rgb(169, 200, 198);
+    font-weight: normal;
+}
+
+/** Icon search  */
+header.menu div.container div.input-search i {
+    padding: 9px 20px;
+    background-color: rgb(68, 68, 68);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color: rgb(235, 235, 235);
+    cursor: pointer;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.144);
+    transition: .3s;
+}
+
+header.menu div.container div.input-search i:hover {
+    background-color: rgb(107, 107, 107);
+}
+
+/** Botão login & carrinho */
+header.menu div.container div.menu-nav {
+    display: flex;
+    align-items: center;
+}
+
+header.menu div.container div.menu-nav a {
+    color: rgb(86, 207, 197);
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    animation: colorize 1s alternate infinite;
+}
+
+@keyframes colorize {
+    from {
+        color: rgb(86, 207, 197);
+    } to {
+        color: rgb(0, 255, 234);
+    }
+}
+
+header.menu div.container div.menu-nav i {
+    padding-left: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/** Carrinho */
+header.menu div.container div.menu-nav i.fa-shopping-cart {
+    font-size: 28px;
+    color: rgb(68, 68, 68);
+    position: relative;
+}
+
+header.menu div.container div.menu-nav i.fa-shopping-cart div.qnt {
+    position: absolute;
+    padding: 6px;
+    background-color: #56cfc5ce;
+    border: 1px solid rgb(255, 241, 241);
+    color: #fff;
+    top: -18px;
+    right: -10px;
+    font-size: .9rem;
+    border-radius: 50%;
+    text-align: center;
+    font-family: 'Roboto Slab';
+}
+
+/*! ============================ */
+
+/*! Submenu */
+
+header.menu div.submenu {
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+}
+
+header.menu div.submenu div.container {
+    justify-content: flex-start;
+}
+
+/** Lista de categorias */
+header.menu div.submenu div.container nav.nav-submenu > ul {
+    display: flex;
+    list-style: none;
+    position: relative;
+    z-index: 1000;
+}
+
+/** Promoções  */
+header.menu div.submenu div.container > nav.nav-submenu > ul > li.promotion > a {
+    color: #444444;
+}
+
+header.menu div.submenu div.container > nav.nav-submenu > ul > li.promotion > a:hover {
+    background-color: #444444;
+    color: #fff;
+}
+
+header.menu div.submenu div.container > nav.nav-submenu > ul > li.promotion div.submenu-content {
+    border-top: 4px solid #444444;
+}
+
+header.menu div.submenu div.container > nav.nav-submenu > ul > li > a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Roboto';
+    font-weight: bold;
+    letter-spacing: -.6px;
+    color: #56cfc5;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    padding: 13px 25px 6px;
+    display: block;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, .5);
+    position: relative;
+    z-index: 5;
+}
+
+header.menu div.submenu div.container > nav.nav-submenu > ul > li > a:after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #56cfc5;
+    top: 17px;
+    z-index: 10;
+}
+
+header.menu div.submenu div.container > nav.nav-submenu > ul > li:hover > a:after {
+    background-color: #fff;
+}
+
+header.menu div.submenu div.container > nav.nav-submenu > ul > li a:not(:last-child) {
+    border-right: 1px solid #FFFFFF;
+}
+
+header.menu div.submenu div.container > nav.nav-submenu > ul > li:hover > a {
+    background-color: rgb(86, 207, 197);
+    color: #FFF;
+}
+
+header.menu div.submenu div.container > nav.nav-submenu > ul > li.promotion:hover > a {
+    background-color: #444444;
+    color: #FFF;
+}
+
+/** Caixa de conteúdo da categoria */
+header.menu div.submenu nav.nav-submenu > ul > li > div.submenu-content {
+    display: none;
+    transition: 100ms ease;
+    border-top: 4px solid rgb(86, 207, 197);
+    height: 400px;
+    background-color: #fff;
+    width: 1280px;
+    cursor: default;
+    position: absolute;
+    left: 0;
+    padding: 15px 20px;
+    box-shadow: 0px 1px 1.5rem rgba(0, 0,0, .2);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    transition: .2s ease;
+}
+
+header.menu div.submenu nav.nav-submenu ul li:hover > div.submenu-content {
+    display: block;
+}
+
+header.menu div.submenu nav.nav-submenu ul li div.submenu-content div.content {
+    display: flex;
+}
+
+header.menu div.submenu nav.nav-submenu ul li.unissex div.submenu-content div.content {
+    padding-left: 60px;
+}
+
+header.menu div.submenu nav.nav-submenu ul li div.submenu-content div.content > div {
+    width: 250px;
+}
+
+header.menu div.submenu nav.nav-submenu ul li.unissex div.submenu-content div.content > div {
+    width: 400px;
+}
+
+header.menu div.submenu nav.nav-submenu ul li.unissex div.submenu-content div.category-box {
+    cursor: pointer;
+    transition: 0.2s all ease;
+    padding: -10px;
+}
+
+header.menu div.submenu nav.nav-submenu ul li.unissex div.submenu-content div.category-box:hover {
+    background-color: #56cfc5;
+    border-radius: 3px;
+    color: #FFF;
+}
+
+div.submenu-content div.content {
+    position: relative;
+}
+
+div.submenu-content div.content a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #56cfc5;
+    font-weight: bold;
+}
+
+div.promotion div.submenu-content div.content a {
+    color: #a1a1a1;
+}
+
+div.submenu-content div.content div.article-content a img {
+    margin-top: 10px;
+    box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .2);
+}
+
+div.submenu-content div.content div.article-content ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    margin-top: 15px;
+    padding-left: 8px;
+}
+
+div.submenu-content div.content div.article-content > ul > li {
+    cursor: pointer;
+    font-size: .9rem;
+    letter-spacing: -.5px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    color: rgb(119, 118, 118);
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 1s ease-out;
+}
+
+div.submenu-content div.content div.article-content li.promo {
+    position: absolute;
+    bottom: -15px;
+}
+
+div.submenu-content div.content div.article-content > ul > li:hover {
+    color: rgb(68, 67, 67);
+}
+
+div.submenu-content div.content div.article-content > ul > li > span {
+    color: #56cfc5;
+    display: block;
+}
+
+/*! ============================ */
+
+/*! Unisex */
+
+div.submenu-content div.article-content div.category-box {
+    display: flex;
+    height: 70px;
+    width: 300px;
+    margin-top: 35px;
+}
+
+div.submenu-content div.article-content div.category-box div.imagem > img {
+    width: 70px;
+    box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+
+div.submenu-content div.article-content div.category-box div.product {
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+div.submenu-content div.article-content div.category-box div.product h2 a {
+    color: #444444;
+    font-size: 1rem;
+}
+
+div.submenu-content div.article-content div.category-box div.product p {
+    font-size: .8rem;
+}
+
+/*! ============================ */
+
+/*! Esportes */
+
+li.sports div.submenu-content div.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+}
+
+div.submenu-content > div.content > div.img-banner {
+    width: unset !important;
+    box-shadow: 0px 0px .3rem rgba(0, 0, 0, .1);
+}
+
+div.submenu-content > div.content > div.img-banner img {
+    border-radius: 3px;
+}
+
+div.submenu-content > div.content > div.img-banner img:hover {
+    cursor: pointer;
+    animation: scale 1s ease;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1);
+    } to {
+        transform: scale(1.01);
+    }
+}
+
+/*! ============================ */
+
+section.home {
+    padding-top: 143px;
+    position: relative;
+}
+
+
+/*! Carousel  */
+
+/** Botões previous & next */
+div.carousel div.options i {
+    color: rgba(255, 255, 255, 0.966);
+    cursor: pointer;
+    position: absolute;
+    z-index: 1001;
+    font-size: 60px;
+}
+
+div.carousel div.options i::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 2px solid rgba(255, 255, 255, 0.294);
+    border-radius: 50%;
+}
+
+/** Circulo em volta do left */
+div.carousel div.options i#previous {
+    top: 265px;
+    left: 55px;
+}
+
+div.carousel div.options i#previous::after {
+    top: -7px;
+    left: -13px;
+}
+
+div.carousel div.options i#next {
+    top: 265px;
+    right: 75px;
+}
+
+div.carousel div.options i#next::after {
+    top: -7px;
+    right: -14px;
+}
+
+
+/** Carousel  */
+section.home div.carousel {
+    height: 600px;
+    margin: 0 auto;
+    width: 1920px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+section.home div.carousel div.carousel-imagens {
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+}
+
+section.home div.carousel div.carousel-imagens ul {
+    display: flex;
+    position: relative;
+    list-style: none;
+}
+
+/*! ============================ */
+
+/*! Sections  */
+
+section.section {
+    margin: 5rem 0;
+    width: 100%;
+}
+
+section.section div.section-title {
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+section.section:hover div.section-title h2::after {
+    height: 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+section.section li {
+    display: flex;
+}
+
+/** Titulo da section */
+section.section div.section-title h2 {
+    display: inline;
+    text-transform: uppercase;
+    background-color: #56cfc5;
+    font-size: 2rem;
+    padding: 0 1rem;
+    color: #FFFFFF;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    z-index: 1111;
+}
+
+section.section div.section-title h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #56cfc5;
+    z-index: -1;
+    transition: 200ms ease;
+}
+
+/*! Section products  */
+div.section-products {
+    animation: fade .7s ease-in;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+div.section-products div.list-products ul {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+div.section-products div.list-products ul:hover div.product-button {
+    opacity: 1;
+    animation-name: fromto;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: alternate;
+}
+
+div.section-products article.product {
+    height: 450px;
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    transition: 300ms ease;
+    margin-top: 10px;
+}
+
+div.section-products article.product div.product-rate ul {
+    display: flex;
+    justify-content: center;
+}
+
+div.section-products article.product div.product-rate i {
+    color: #56cfc5;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+
+div.section-products article.product div.product-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+div.section-products article.product div.loved {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
+    transition: 0.3s;
+}
+
+div.section-products article.product div.loved:hover {
+    transform: scale(1.01);
+}
+
+div.section-products article.product:hover {
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, .1);
+}
+
+div.section-products article.product div.loved i {
+    color: #56cfc5;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+/** Informações do produto  */
+div.section-products article.product header.product-info {
+    margin-top: .5rem;
+}
+
+div.section-products article.product header.product-info div.product-name {
+    /* padding: 0px 35px; */
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+div.section-products article.product header.product-info div.product-name h3 {
+    color: rgb(68, 68, 68);
+    font-weight: normal;
+    letter-spacing: -.3px;
+    word-spacing: -.2px;
+    font-family: 'Roboto';
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+div.section-products article.product header.product-info div.product-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+div.section-products article.product header.product-info div.product-price span {
+    color: rgb(65, 65, 65);
+    text-decoration: line-through;
+    margin-right: 10px;
+    font-style: italic;
+}
+
+div.section-products article.product header.product-info span.product-parcel {
+    display: flex;
+    justify-content: center;
+    color: #56cfc5;
+}
+
+div.section-products article.product header.product-info div.product-price h4 {
+    color: #56cfc5;
+    font-size: 1.3rem;
+}
+
+/** Botão previous & next dos produtos da listaz */
+div.section-products div.list-products div.product-button {
+    position: absolute;
+    top: 130px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: rgb(68, 68, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+@keyframes fromto {
+    from {
+        transform: scale(.8);
+    } to {
+        transform: scale(1);
+    }
+}
+
+div.section-products div.list-products div.product-button#previous {
+    left: -60px;
+}
+
+div.section-products div.list-products div.product-button#next {
+    right: -60px;
+}
+
+/*! ============================ */
+
+/*! Owl Carousel  */
+
+.owl-next {
+    background-color: #FFFFFF !important;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
+    transition: 0.2s ease;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 1;
+    position: absolute;
+    top: 200px;
+    right: -60px;
+}
+
+.owl-prev {
+    background-color: #FFFFFF !important;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
+    transition: 0.2s ease;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 1;
+    position: absolute;
+    top: 200px;
+    left: -60px;
+}
+
+.owl-nav button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none !important;
+}
+
+.owl-nav.disabled {
+    display: block !important;
+}
+
+.owl-nav button span {
+    color: rgb(68, 68, 68);
+    font-size: 20px !important;
+    outline: none !important;
+}
+
+.owl-next span {
+    color: #000;
+    outline: none;
+}
+
+ .owl-stage {
+    height: 470px !important;
+}
+
+.owl-carousel .owl-item img {
+    padding: 5px;
+}
+
+.owl-item > li {
+    padding: 0 15px;
+}
+
+.owl-item {
+    position: relative;
+    transition: .3s;
+}
+
+.owl-item img {
+    transition: .3s ease;
+}
+
+.active {
+    padding: 20px;
+}
+
+.owl-item:hover img {
+    transform: scale(1.01);
+}
+
+/*
+.owl-item {
+    width: 315px !important;
+}
+
+.owl-carousel .owl-item li {
+    margin-top: 15px;
+}
+
+.owl-carousel img {
+    width: 300px !important;
+}
+
+.owl-stage {
+    overflow: hidden !important;
+    height: 480px !important;
+}
+
+.owl-item article.product {
+    height: 445px;
+} */

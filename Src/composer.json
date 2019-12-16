@@ -1,0 +1,22 @@
+{
+    "name": "u126842498/src",
+    "description": "Lojinha",
+    "authors": [
+        {
+            "name": "Emanuel Correa",
+            "email": "emanuel.silvati@gmail.com"
+        }
+    ],
+    "require": {
+        
+    },
+    "require-dev": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "../App/",
+            "Src\\": "../Src/"
+        }
+    }
+}
