@@ -37,12 +37,13 @@
     <div class="section-products">
         <div class="list-products">
             <ul class="owl-carousel">
-                <?php foreach ($this->getModel()->selectObject() as $produto) : ?>
-                    <a href="<?php echo DIRPAGE . $produto->slug; ?>" style="text-decoration: none;">
+            <!-- <?php print_r($this->getModel()->selectProductsByCat(10)); ?> -->
+                <?php foreach ($this->getModel()->selectProductsByCat(30) as $produto) : $sub = $this->getModel()->selectNameByCat($produto->catSub)[0]['slug']; ?>
+                    <a href="<?php echo DIRPAGE . $produto->productSlug; ?>" style="text-decoration: none;">
                         <li>
                             <article class="product">
                                 <div class="product-image">
-                                    <img src="<?php echo $produto->url_img; ?>" width="300">
+                                    <img src="<?php echo $produto->productImg; ?>" width="300">
                                 </div>
                                 <div class="loved">
                                     <i class="fas fa-heart"></i>
@@ -58,15 +59,15 @@
                                 </div>
                                 <header class="product-info">
                                     <div class="product-name">
-                                        <h3><?php echo $produto->name; ?></h3>
+                                        <h3><?php echo $produto->productName; ?></h3>
                                     </div>
                                     <div class="product-price">
-                                        <?php if ($produto->price_before != 0) { ?>
-                                            <span><?php echo $produto->price_before; ?></span>
+                                        <?php if ($produto->productPriceBefore != 0) { ?>
+                                            <span><?php echo $produto->productPriceBefore; ?></span>
                                         <?php } ?>
-                                        <h4>R$ <?php echo number_format($produto->price, 2, ',', '.') ?></h4>
+                                        <h4>R$ <?php echo number_format($produto->productPrice, 2, ',', '.') ?></h4>
                                     </div>
-                                    <span class="product-parcel">ou 1x de R$ <?php echo $produto->price; ?></span>
+                                    <span class="product-parcel">ou 1x de R$ <?php echo $produto->productPrice; ?></span>
                                 </header>
                             </article>
                         </li>
