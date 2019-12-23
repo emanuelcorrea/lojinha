@@ -24,8 +24,9 @@ img::selection {
     margin: 0 auto;
 }
 
-section .container {
-    max-width: 1260px;
+section .container,
+footer .container {
+    max-width: 1360px;
 }
 
 ::selection {
@@ -750,6 +751,89 @@ div.section-products div.list-products div.product-button#previous {
 
 div.section-products div.list-products div.product-button#next {
     right: -60px;
+}
+
+/*! ============================ */
+
+/*! Footer */
+
+/** Footer da home  */
+footer.footer-home {
+    width: 100%;
+    background-color: #00000003;
+    height: 700px;
+}
+
+footer.footer-home div.container {
+    display: flex;
+    justify-content: center;
+}
+
+footer.footer-home section.social div.news-letter div.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Cadastre-se 10% */
+footer.footer-home section.social div.news-letter div.logo img {
+    width: 270px;
+    margin-right: 50px;    
+    padding: 10px 0;
+}
+
+footer.footer-home section.social div.news-letter form input[type="text"] {
+    width: 280px;
+    height: 35px;
+    padding-left: 10px;
+    outline: none;
+    border: 1px solid #56cfc5;
+    margin-right: 25px;
+    font-size: 15px;
+}
+
+footer.footer-home section.social div.news-letter form input[type="submit"] {
+    background-color: #56cfc5;
+    padding: 10px 10px;
+    cursor: pointer;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+/** Social */
+footer.footer-home section.social {
+    display: flex;
+    flex-direction: column;
+}
+
+footer.footer-home section.social div.social-medias {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #56CFC5;
+    height: 100px;
+}
+
+footer.footer-home section.social div.social-medias div.social-title h4 {
+    font-size: 1.6rem;
+    color: #FFF;
+    font-weight: normal;
+    margin-right: 50px;
+    font-family: 'Roboto';
+}
+
+footer.footer-home section.social div.social-medias div.social-icons nav ul {
+    display: flex;
+    align-items: center;
+}
+
+footer.footer-home section.social div.social-medias div.social-icons nav ul li {
+    margin-right: 20px;
+}
+
+footer.footer-home section.social div.social-medias div.social-icons nav ul li a i {
+    font-size: 30px;
+    color: #fff;
 }
 
 /*! ============================ */
