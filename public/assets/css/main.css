@@ -104,7 +104,7 @@ div.menu div.submenu div.container {
 /** Logo */
 header.menu div.container div.logo h1 {
     font-family: 'Roboto';
-    color: rgb(68, 68, 68);
+    color: #444444;
     text-transform: uppercase;
     font-size: 3.2rem;
     text-shadow: 0px 0px 3px rgb(0, 0, 0);
@@ -757,16 +757,19 @@ div.section-products div.list-products div.product-button#next {
 
 /*! Footer */
 
-/** Footer da home  */
+/** Footer da home */
 footer.footer-home {
     width: 100%;
-    background-color: #00000003;
-    height: 700px;
 }
 
 footer.footer-home div.container {
     display: flex;
     justify-content: center;
+}
+
+footer.footer-home section.social {
+    background-color: #FAFAFA;
+    padding-bottom: 50px;
 }
 
 footer.footer-home section.social div.news-letter div.container {
@@ -777,7 +780,7 @@ footer.footer-home section.social div.news-letter div.container {
 
 /** Cadastre-se 10% */
 footer.footer-home section.social div.news-letter div.logo img {
-    width: 270px;
+    width: 280px;
     margin-right: 50px;    
     padding: 10px 0;
 }
@@ -806,20 +809,33 @@ footer.footer-home section.social {
     flex-direction: column;
 }
 
+/** Faixa das redes sociais */
 footer.footer-home section.social div.social-medias {
     display: flex;
     align-items: center;
     width: 100%;
     background-color: #56CFC5;
-    height: 100px;
+    height: 70px;
 }
 
-footer.footer-home section.social div.social-medias div.social-title h4 {
-    font-size: 1.6rem;
+footer.footer-home section.social div.social-medias div.social-title h4,
+footer.footer-home section.social div.social-medias div.social-icons h5 {
+    font-size: 1.4rem;
     color: #FFF;
     font-weight: normal;
     margin-right: 50px;
     font-family: 'Roboto';
+}
+
+footer.footer-home section.social div.social-medias div.social-icons h5 {
+    font-family: 'Roboto Mono';
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+footer.footer-home section.social div.social-medias div.social-icons {
+    display: flex;
+    align-items: center;
 }
 
 footer.footer-home section.social div.social-medias div.social-icons nav ul {
@@ -827,14 +843,98 @@ footer.footer-home section.social div.social-medias div.social-icons nav ul {
     align-items: center;
 }
 
-footer.footer-home section.social div.social-medias div.social-icons nav ul li {
-    margin-right: 20px;
+footer.footer-home section.social div.social-medias div.social-icons nav ul li:not(:last-child) {
+    margin-right: 30px;
 }
 
 footer.footer-home section.social div.social-medias div.social-icons nav ul li a i {
     font-size: 30px;
     color: #fff;
 }
+
+/*? Links */
+footer.footer-home section.social div.links {
+    margin-top: 45px;
+}
+
+footer.footer-home section.social div.links div.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer.footer-home section.social div.links div.links-nav > nav > ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer.footer-home section.social div.links div.links-nav > nav > ul > li {
+    margin-right: 60px;
+}
+
+footer.footer-home section.social div.links nav ul li ul li {
+    margin-top: 10px;
+}
+
+footer.footer-home section.social div.links h6 {
+    font-size: 1rem;
+    color: #56CFC5;
+    font-family: 'Roboto Mono';
+    margin-bottom: 15px;
+}
+
+footer.footer-home section.social div.links li {
+    margin-left: 5px;
+}
+
+footer.footer-home section.social div.links li > a {
+    text-decoration: none;
+    color: #888888;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+footer.footer-home section.social div.links div.help div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+footer.footer-home section.social div.links div.help div p {
+    margin-left: 10px;
+}
+
+footer.footer-home section.social div.links div.help h6 {
+    color: rgb(51, 51, 51);
+}
+
+/*? Business */
+footer.footer-home section.business {
+    margin: 20px 0;
+}
+
+footer.footer-home section.business > div.container {
+    justify-content: flex-start;
+}
+   
+footer.footer-home section.business div.pagment > div > div {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+/** Selos */
+footer.footer-home section.business div.pagment > div {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+footer.footer-home section.business div.pagment div > img {
+    margin-right: 5px;
+    display: flex;
+}
+
 
 /*! ============================ */
 
