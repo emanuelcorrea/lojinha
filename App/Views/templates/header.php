@@ -13,7 +13,7 @@
 </div>
 <header class="menu">
     <div class="container">
-        <div class="logo"><h1>Lojinha</h1></div>
+        <div class="logo"><a href="http://localhost/lojinha/" style="text-decoration: none"><h1>Lojinha</h1></a></div>
         <div class="input-search">
             <input type="text" name="search" id="search" placeholder="Busque aqui...">
             <i class="fas fa-search"></i>

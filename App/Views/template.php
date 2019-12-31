@@ -35,8 +35,9 @@
     <script src="<?php echo DIRJVS; ?>carousel.js"></script>
     <script src="<?php echo DIRJVS; ?>script.js"></script>
     <script src="<?php echo DIRJVS; ?>owl.carousel.min.js"></script>
+
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('.section .owl-carousel').owlCarousel({
             loop: true,
             nav: true,
             mouseDrag: true,
@@ -53,17 +54,63 @@
             }
         });
 
-        var prev = document.querySelectorAll('.owl-prev span');
+        var prev = document.querySelectorAll('.section .owl-prev span');
 
         [].forEach.call(prev, function(prev) {
             prev.innerHTML = '<i class="fas fa-arrow-left"></i>';
         });
 
-        var next = document.querySelectorAll('.owl-next span');
+        var next = document.querySelectorAll('.section .owl-next span');
 
         [].forEach.call(next, function(next) {
             next.innerHTML = '<i class="fas fa-arrow-right"></i>';
         });
+
+        
+        
+    </script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            margin:10,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
+
+    <script>
+        var img1 = document.getElementById('1');
+        var img2 = document.getElementById('2');
+        var img3 = document.getElementById('3');
+
+        console.log(img3);
+        var img = document.getElementById('img-principal');
+
+        img1.onclick = function() {
+            img.src = img1.src;
+        }
+        
+        img2.onclick = function() {
+            img.src = img2.src;
+        } 
+
+        img3.onclick = function() {
+            img.src = img3.src;
+        } 
+
+        function changeImage() {
+            document.getElementById("img-principal").src = this.src;
+        }
+        
     </script>
 </body>
 

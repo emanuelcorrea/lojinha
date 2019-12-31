@@ -3,7 +3,7 @@ namespace App\Models;
 
 use Src\Core\Crud;
 
-class Produtos extends Crud
+class Products extends Crud
 {
     public function __construct()
     {

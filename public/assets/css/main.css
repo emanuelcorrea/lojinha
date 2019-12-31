@@ -18,13 +18,12 @@ img::selection {
     background-color: transparent;
 }
 
-
 .container {
-    max-width: 1200px;
+    max-width: 1360px;
     margin: 0 auto;
 }
 
-section .container,
+section > .container,
 footer .container {
     max-width: 1360px;
 }
@@ -33,6 +32,10 @@ footer .container {
     background-color: #56cfc5;
     color: #ffffff;
     text-shadow: none;
+}
+
+.product-other-images div.item {
+    cursor: pointer;
 }
 
 /*todo ========================  */
@@ -294,7 +297,7 @@ header.menu div.submenu nav.nav-submenu > ul > li > div.submenu-content {
     border-top: 4px solid rgb(86, 207, 197);
     height: 400px;
     background-color: #fff;
-    width: 1280px;
+    width: 1360px;
     cursor: default;
     position: absolute;
     left: 0;
@@ -318,6 +321,7 @@ header.menu div.submenu nav.nav-submenu ul li.unissex div.submenu-content div.co
 }
 
 header.menu div.submenu nav.nav-submenu ul li div.submenu-content div.content > div {
+    margin-left: 15px;
     width: 250px;
 }
 
@@ -464,6 +468,10 @@ section.home {
     position: relative;
 }
 
+main.home {
+    margin-top: 200px;
+    position: relative;
+}
 
 /*! Carousel  */
 
@@ -621,12 +629,12 @@ div.section-products article.product {
     margin-top: 10px;
 }
 
-div.section-products article.product div.product-rate ul {
+div.product-rate ul {
     display: flex;
     justify-content: center;
 }
 
-div.section-products article.product div.product-rate i {
+div.product-rate i {
     color: #56cfc5;
     font-size: 1.2rem;
     padding-bottom: 5px;
@@ -910,7 +918,8 @@ footer.footer-home section.social div.links div.help h6 {
 
 /*? Business */
 footer.footer-home section.business {
-    margin: 20px 0;
+    margin: 0 0 20px;
+    padding-bottom: 25px;
 }
 
 footer.footer-home section.business > div.container {
@@ -935,12 +944,11 @@ footer.footer-home section.business div.pagment div > img {
     display: flex;
 }
 
-
 /*! ============================ */
 
 /*! Owl Carousel  */
 
-.owl-next {
+.section .owl-next {
     background-color: #FFFFFF !important;
     border-radius: 50%;
     height: 50px;
@@ -956,7 +964,7 @@ footer.footer-home section.business div.pagment div > img {
     right: -60px;
 }
 
-.owl-prev {
+.section .owl-prev {
     background-color: #FFFFFF !important;
     border-radius: 50%;
     height: 50px;
@@ -972,54 +980,54 @@ footer.footer-home section.business div.pagment div > img {
     left: -60px;
 }
 
-.owl-nav button {
+.section .owl-nav button {
     display: flex;
     justify-content: center;
     align-items: center;
     outline: none !important;
 }
 
-.owl-nav.disabled {
+.section .owl-nav.disabled {
     display: block !important;
 }
 
-.owl-nav button span {
+.section .owl-nav button span {
     color: rgb(68, 68, 68);
     font-size: 20px !important;
     outline: none !important;
 }
 
-.owl-next span {
+.section .owl-next span {
     color: #000;
     outline: none;
 }
 
- .owl-stage {
+.section .owl-stage {
     height: 470px !important;
 }
 
-.owl-carousel .owl-item img {
+.section .owl-carousel .owl-item img {
     padding: 5px;
 }
 
-.owl-item > li {
+.section .owl-item > li {
     padding: 0 15px;
 }
 
-.owl-item {
+.carousel .owl-item {
     position: relative;
     transition: .3s;
 }
 
-.owl-item img {
+.section .owl-item img {
     transition: .3s ease;
 }
 
-.active {
+.section .active {
     padding: 20px;
 }
 
-.owl-item:hover img {
+.section .owl-item:hover img {
     transform: scale(1.01);
 }
 
@@ -1044,3 +1052,191 @@ footer.footer-home section.business div.pagment div > img {
 .owl-item article.product {
     height: 445px;
 } */
+
+/*! Product */
+section.product-page {
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section.product-page div.product-header div.container {
+    display: flex;
+}
+
+/*? Detalhes do produto */
+section.product-page div.product-header div.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 90px;
+}
+
+/** Imagens do Produto */
+section.product-page div.product-header div.product-other-images {
+    margin-top: 5px;
+}
+
+section.product-page div.product-header div.product-image-principal #img-principal {
+    transition: .3s;
+}
+
+section.product-page div.product-header div.product-other-images ul li 
+
+/** Nome do produto */
+section.product-page div.product-header div.product-details div.product-name h1 {
+    font-size: 1.7rem !important;
+    font-weight: normal;
+    color: #444444;
+}
+
+/*? Opiniões */
+section.product-page div.product-header div.product-details div.product-rate {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+section.product-page div.product-header div.product-details div.product-rate ul {
+    justify-content: flex-start !important;
+    margin-right: 10px;
+}
+
+section.product-page div.product-header div.product-details div.product-rate a {
+    color: #444;
+}
+
+/*? Preço do produto */
+section.product-page div.product-header div.product-details div.product-price {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/** Barra embaixo do R$ */
+section.product-page div.product-header div.product-details div.product-price::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 7%;
+    background-color: #56CFC5;
+    border-radius: 5px;
+}
+
+
+/** R$ */
+section.product-page div.product-header div.product-details div.product-price h2 span {
+    font-size: 2.5rem;
+    color: #56CFC5;
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Roboto Mono';
+    margin-right: 10px;
+}
+
+section.product-page div.product-header div.product-details div.product-price h2 {
+    font-size: 3rem;
+    color: #444;
+}
+
+section.product-page div.product-header div.product-details div.product-price p.or {
+    color: #444;
+    margin: 0 10px;
+}
+
+/** Divisão */
+section.product-page div.product-header div.product-details div.product-price span.div {
+    color: #56CFC5;
+    font-weight: bold;
+}
+
+/** Valor do parcelamento */
+section.product-page div.product-header div.product-details div.product-price span.subprice {
+    color: #444;
+    font-weight: bold;
+}
+
+/*? Tamanhos */
+section.product-page div.product-header div.product-details div.product-sizes ul,
+section.product-page div.product-header div.product-details div.product-colors ul {
+    margin: 15px 0;
+    display: flex;
+}
+
+section.product-page div.product-header div.product-details div.product-sizes ul li,
+section.product-page div.product-header div.product-details div.product-colors ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #56CFC5;
+    color: #FFF;
+    margin-right: 10px;
+    font-size: 18px;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: .3s;
+}
+
+section.product-page div.product-header div.product-details div.product-sizes ul li:hover,
+section.product-page div.product-header div.product-details div.product-colors ul li:hover {
+    box-shadow: 0px 0px .3rem rgba(116, 116, 116, 0.8);
+}
+
+/*? Cores */
+li.white {
+    background-color: #fff !important;
+}
+
+li.white:hover {
+    border: 2px solid #fff !important;
+}
+
+li.black {
+    background-color: #000 !important;
+}
+
+li.black:hover {
+    border: 2px solid #000 !important;
+}
+
+li.blue {
+    background-color: #2c2cff !important;
+}
+
+li.blue:hover {
+    border: 2px solid #2c2cff !important;
+}
+
+li.pink {
+    background-color: pink !important;
+}
+
+li.pink:hover {
+    border: 2px solid pink !important;
+}
+
+/*? Botão de comprar 
+section.product-page div.product-header div.product-details div.product-buy button {
+    margin-top: 60px;
+    width: 200px;
+    height: 65px;
+    background-color: #56CFC5;
+    border-radius: 50px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+}
+*/

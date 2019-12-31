@@ -17,7 +17,8 @@ class Router
         $this->routes = array(
             '' => 'HomeController',
             'home' => 'HomeController',
-            'galeria' => 'GaleriaController'
+            'galeria' => 'GaleriaController',
+            'produto' => 'ProductController'
         );
 
         if (array_key_exists($i, $this->routes)) {

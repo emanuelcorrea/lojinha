@@ -5,23 +5,24 @@ use Src\Core\Render;
 
 use App\Models\Products;
 
-class HomeController extends Render
+class ProductController extends Render
 {
     private $model;
-
+    
     public function __construct()
     {
         $this->model = new Products;
     }
-    
-    public function index()
+
+    public function slug($slug)
     {
-        $this->setTitle('Home');
-        $this->setDir('home');
+        $this->setTitle('Produto');
+        $this->setDir('product');
         $this->renderTemplate();
     }
 
-    public function getModel() {
+    public function getModel()
+    {
         return $this->model;
     }
 }
