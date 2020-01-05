@@ -9,7 +9,7 @@
                     <div class="product-other-images">
                         <div class="owl-carousel owl-theme" style="width: 600px">
                             <div class="item" class="ativado">
-                                <img     src="https://static.zattini.com.br/produtos/camisa-social-manga-longa-watkins&krown-masculina/14/IFZ-0006-014/IFZ-0006-014_zoom1.jpg" alt="" width="70">
+                                <img id="1" src="https://static.zattini.com.br/produtos/camisa-social-manga-longa-watkins&krown-masculina/14/IFZ-0006-014/IFZ-0006-014_zoom1.jpg" alt="" width="70">
                             </div>
                             <div class="item">
                                 <img id="2" src="https://static.zattini.com.br/produtos/camisa-social-manga-longa-watkins&krown-masculina/14/IFZ-0006-014/IFZ-0006-014_zoom2.jpg" alt="" width="70">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="product-details">
                     <div class="product-name">
-                        <h1>Camisa Social Manga Longa Watkins&Krown Masculina</h1>
+                        <h1>Camisa Social Manga Longa Watkins&Krown Masculina - <span>Ref: IFZ-0006-014-06</span></h1>
                     </div>
                     <div class="product-rate">
                         <ul>
@@ -48,9 +48,9 @@
                                 <div class="product-color-selected ball white" name="Branco"></div>
                                 <div class="product-extra-colors">
                                     <ul>
-                                        <li class="ball black" name="Preto"></li>
+                                        <li class="ball pink" name="Rosa"></li>
                                         <li class="ball blue" name="Azul"></li>
-                                        <li class="ball white" name="Rosa" style="background: none;"></li>
+                                        <li class="ball white" style="background: none;"></li>
                                         <i class="fas fa-plus"></i>
                                     </ul>
                                 </div>
@@ -67,7 +67,29 @@
                         <div class="product-sizes product-bg">
                             <h3>TAMANHOS</h3>
                             <div>
-
+                                <select>
+                                    <option data-display="P">Nenhum</option>
+                                    <option value="p">P</option>
+                                    <option value="m">M</option>
+                                    <option value="3" disabled>A disabled option</option>
+                                    <option value="g">G</option>
+                                    <option value="gg">GG</option>
+                                    <option value="xgg">XGG</option>
+                                </select>
+                            </div>
+                            <!-- <div class="product-have-colors">
+                                <ul>
+                                    <li class="white"></li>
+                                    <li class="black"></li>
+                                    <li class="blue"></li>
+                                    <li class="pink"></li>
+                                </ul>
+                            </div> -->
+                        </div>
+                        <div class="product-quantity product-bg">
+                            <h3>QUANTIDADE</h3>
+                            <div>
+                                <input type="number" name="quantity" id="quantity" min="0" max="20" value="0">
                             </div>
                             <!-- <div class="product-have-colors">
                                 <ul>

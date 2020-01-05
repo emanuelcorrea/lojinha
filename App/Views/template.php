@@ -32,6 +32,9 @@
     <?php $this->addFooter(); ?>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="<?php echo DIRJVS; ?>jquery.js"></script>
+    <script src="<?php echo DIRJVS; ?>jquery.nice-select.js"></script>
+    <script src="<?php echo DIRJVS; ?>nice-number.js"></script>
     <script src="<?php echo DIRJVS; ?>carousel.js"></script>
     <script src="<?php echo DIRJVS; ?>script.js"></script>
     <script src="<?php echo DIRJVS; ?>owl.carousel.min.js"></script>

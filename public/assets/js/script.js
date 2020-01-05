@@ -9,3 +9,9 @@ $(document).ready(function() {
         $(".hint").remove();
     });
 });
+
+$(document).ready(function() {
+    $("select").niceSelect();
+});
+
+$('input[type="number"]').niceNumber("autoSize");

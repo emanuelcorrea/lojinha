@@ -1100,7 +1100,9 @@ section.product-page div.product-header div.product-details {
 
 section.product-page div.product-header div.product-details div.line {
     display: flex;
-    width: 100%;
+    width: 94%;
+    position: relative;
+    left: -10px;
 }
 
 /** Imagens do Produto */
@@ -1119,6 +1121,11 @@ section.product-page div.product-header div.product-details div.product-name h1 
     color: #444444;
 }
 
+section.product-page div.product-header div.product-details div.product-name h1 span {
+    border: 1px solid #000000;
+    padding: 5px;
+    font-size: 16px;
+}
 /*? Opiniões */
 section.product-page div.product-header div.product-details div.product-rate {
     display: flex;
@@ -1178,12 +1185,17 @@ section.product-page div.product-header div.product-details div.product-price p.
 }
 
 /** Pré-descrição do produto */
+section.product-page div.product-header div.product-details div.product-pre-description {
+    position: relative;
+}
+
 section.product-page div.product-header div.product-details div.product-pre-description::after {
     content: '';
-    height: 6px;
+    height: 1px;
     width: 50%;
-    background-color: #56CFC5;
-    margin: 50px 160px 50px;
+    display: block;
+    margin: 20px 0;
+    background-color: #00000025;
 }
 
 section.product-page div.product-header div.product-details div.product-pre-description p {
@@ -1277,7 +1289,7 @@ section.product-page div.product-header div.product-details div.product-extra-co
 .product-bg {
     background-repeat: no-repeat;
     width: 33%;
-    margin-top: 50px;
+    margin-top: 30px;
     height: 100px;
 }
 
@@ -1289,6 +1301,11 @@ section.product-page div.product-header div.product-details div.product-extra-co
     font-weight: bold;
     font-size: 15px;
     font-family: 'Roboto Slab';
+    letter-spacing: 1.5px;
+}
+
+.product-colors.product-bg h3 {
+    left: -5px;
 }
 
 .white {
@@ -1312,6 +1329,45 @@ section.product-page div.product-header div.product-details div.product-sizes {
     background-image: url("../img/product-size.png");
 }
 
+section.product-page div.product-header div.product-details .nice-select {
+    position: relative;
+    left: 70px;
+}
+
+/*? Quantidade */
+section.product-page div.product-header div.product-details div.product-quantity {
+    background-image: url("../img/product-quantity.png");
+}
+
+section.product-page div.product-header div.product-details div.product-quantity .nice-number {
+    position: relative;
+    top: 3px;
+    left: 50px;
+}
+
+section.product-page div.product-header div.product-details div.product-quantity input {
+    border-bottom: 1px solid #56CFC5;
+}
+
+.nice-number button {
+    background-color: #56CFC5;
+    width: 30px;
+    height: 30px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 10px !important;
+}
+
+.nice-number button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.nice-number button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 /*? Botão de comprar 
 section.product-page div.product-header div.product-details div.product-buy button {
     margin-top: 60px;
