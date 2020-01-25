@@ -1368,18 +1368,69 @@ section.product-page div.product-header div.product-details div.product-quantity
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-/*? Botão de comprar 
-section.product-page div.product-header div.product-details div.product-buy button {
+
+/*? Botão de comprar  */
+section.product-page div.product-header div.product-details div.product-buy {
+    display: flex;
+    align-items: center;
     margin-top: 60px;
-    width: 200px;
+}
+
+section.product-page div.product-header div.product-details div.product-buy button {
+    width: 435px;
     height: 65px;
     background-color: #56CFC5;
     border-radius: 50px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     color: #FFF;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Roboto';
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    box-shadow: 0px 5px 1px #00000025;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    transition: 0.4s ease;
+    outline: 0;
 }
-*/
+
+section.product-page div.product-header div.product-details div.product-buy button i {
+    font-size: 2.3rem;
+    margin-right: 10px;
+}
+
+section.product-page div.product-header div.product-details div.product-buy button:hover {
+    background-color: rgb(44, 148, 139);
+}
+
+section.product-page div.product-header div.product-details div.product-buy div.product-favorite {
+    height: 65px;
+    width: 160px;
+    background-color: #56CFC5;
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    box-shadow: 0px 5px 1px #00000025;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+section.product-page div.product-header div.product-details div.product-buy div.product-favorite i {
+    color: #FFF;
+    font-size: 2.5rem;
+    padding-right: 10px;
+}
+
+section.product-page div.product-header div.product-details div.product-buy div.product-favorite:hover {
+    background-color: #686868;
+}

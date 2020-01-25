@@ -87,7 +87,7 @@
                             </div> -->
                         </div>
                         <div class="product-quantity product-bg">
-                            <h3>QUANTIDADE</h3>
+                            <h3>QUANTIDADES</h3>
                             <div>
                                 <input type="number" name="quantity" id="quantity" min="0" max="20" value="0">
                             </div>
@@ -119,9 +119,12 @@
                             <li>GG</li>
                         </ul>
                     </div> -->
-                    <!-- <div class="product-buy">
-                        <button class="btn-buy">Comprar</button>
-                    </div> -->
+                    <div class="product-buy">
+                        <button class="btn-buy"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                        <div class="product-favorite">
+                            <i class="fab fa-gratipay"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -23,6 +23,9 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin|Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700&display=swap" rel="stylesheet">
 
+    <!-- Javascript -->
+    <script src="<?php echo DIRJVS; ?>jssor.slider.min.js"></script>
+
     <?php $this->addHead(); ?>
 </head>
 
