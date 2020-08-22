@@ -132,4 +132,29 @@
                 
         </div>
     </section>
+
+    <script>
+        var img1 = document.getElementById('1');
+        var img2 = document.getElementById('2');
+        var img3 = document.getElementById('3');
+
+        console.log(img3);
+        var img = document.getElementById('img-principal');
+
+        img1.onclick = function() {
+            img.src = img1.src;
+        }
+
+        img2.onclick = function() {
+            img.src = img2.src;
+        } 
+
+        img3.onclick = function() {
+            img.src = img3.src;
+        } 
+
+        function changeImage() {
+            document.getElementById("img-principal").src = this.src;
+        }
+    </script>
 </main>

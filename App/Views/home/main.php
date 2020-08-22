@@ -10,16 +10,6 @@
                         <img src="<?php echo DIRIMG; ?>carousel/img-banner1.jpg" alt="Primeira imagem do Banner">
                     </div>
                 </li>
-                <li>
-                    <div class="item">
-                        <img src="<?php echo DIRIMG; ?>carousel/img-banner2.jpg" alt="Primeira imagem do Banner">
-                    </div>
-                </li>
-                <li>
-                    <div class="item">
-                        <img src="<?php echo DIRIMG; ?>carousel/img-banner3.jpg" alt="Primeira imagem do Banner">
-                    </div>
-                </li>
             </ul>
         </div>
         <div class="options">
