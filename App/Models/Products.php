@@ -74,7 +74,7 @@ class Products extends Crud
             FROM products as prod 
             INNER JOIN subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
             INNER JOIN categories as cat ON cat.id_category = sub.id_category 
-            WHERE prod.id_subcategory = 28 OR prod.id_subcategory = 29 OR prod.id_subcategory = 13 OR prod.id_subcategory = 16
+            WHERE prod.id_subcategory IN (28, 29, 13, 14, 16)
             ORDER BY id_product"
         );
 
@@ -102,7 +102,7 @@ class Products extends Crud
             FROM products as prod 
             INNER JOIN subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
             INNER JOIN categories as cat ON cat.id_category = sub.id_category 
-            WHERE prod.id_subcategory = 44 OR prod.id_subcategory = 53 OR prod.id_subcategory = 45
+            WHERE prod.id_subcategory = 44 OR prod.id_subcategory = 53 OR prod.id_subcategory = 45 OR prod.id_subcategory = 5
             ORDER BY id_product"
         );
 
