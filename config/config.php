@@ -8,6 +8,7 @@ if (ENVIRONMENT === 'production') {
     define('DBUSER', 'root');
     define('DBPASS', '');
     
+    // Se o p rojeto estiver em uma pasta e não na raiz do www
     $pasta = 'lojinha/';
     define('DIRPAGE', "http://{$_SERVER['HTTP_HOST']}/$pasta");
 } else {
@@ -16,6 +17,7 @@ if (ENVIRONMENT === 'production') {
     define('DBUSER', 'u126842498_lojinha');
     define('DBPASS', 'BoaeI`1!kH');
 
+    // Se o p rojeto estiver em uma pasta e não na raiz do www
     $pasta = '';
     define('DIRPAGE', "https://{$_SERVER['HTTP_HOST']}/$pasta");
 }

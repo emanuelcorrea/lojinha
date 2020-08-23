@@ -29,8 +29,6 @@
 - MYSQL 5.7+
 - Composer
 
-<br>
-
 ### Composer
 1. Clone ou faça download do repositório;
 ```
@@ -42,13 +40,28 @@ git clone https://github.com/emanuelcorrea/lojinha.git lojinha && cd lojinha/
 cd Src/ && composer install
 ```
 
-<br>
-
 ### Database
 
 1. Faça a inserção do banco de dados com o arquivo *lojinha.sql*, localizado na pasta *config/database/*;
 ```
 mysql -u root < config/database/lojinha.sql
+```
+
+2. Edite as constantes de conexão com o banco no arquivo *config.php* com as suas credenciais do *MYSQL*.
+```
+vi config/config.php
+-->
+
+if (ENVIRONMENT === 'production') {
+    define('DBHOST', 'localhost');
+    define('DBNAME', 'lojinha');
+    define('DBUSER', 'root');
+    define('DBPASS', '');
+    
+    // Se o projeto estiver em uma pasta e não na raiz do www
+    $pasta = 'lojinha/';
+    define('DIRPAGE', "http://{$_SERVER['HTTP_HOST']}/$pasta");
+}
 ```
 
 ## License
