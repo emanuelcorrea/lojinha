@@ -12,53 +12,44 @@
 </p>
 <br>
 
- *<h2 align="center">Preview</h2>*
-
-<a href="http://lojinha.emanuelcorrea.com.br">
+<a href="http://lojinha.emanuelcorrea.com.br" title="Visitar site">
   <img src="https://i.imgur.com/VYPCsw3.png">
 </a>
 
-*Um simples e-commerce sendo contruído com amor 💙*
-<!--
-## Requisitos
+> *"Um simples e-commerce sendo construído com amor 💙!"* 
 
-- Ter o [Node](https://nodejs.org/en/) instalado na máquina.
+<br>
 
-## 💻 Com GUI Web
+<h1 align="center">🛠 Instalação</h1>
+<br>
 
+
+### Requisitos
+- PHP 7.0+
+- MYSQL 5.7+
+- Composer
+
+<br>
+
+### Composer
 1. Clone ou faça download do repositório;
 ```
-git clone https://github.com/david123ramos/CatDown.git CatDown && cd CatDown/
+git clone https://github.com/emanuelcorrea/lojinha.git lojinha && cd lojinha/
 ```
 
-2. Entre na pasta *"backend"* e faça a instalação dos módulos;
+2. Faça a instalação dos módulos para utilização do autoload do **Composer**;
 ```
-cd backend/ && npm install
-```
-
-3. Abra o arquivo index.html na pasta *"frontend/"* em seu navegador de preferência;
-
-4. Insira o link do vídeo do **Youtube** e seja feliz ;) 😊
-
-## 💻 Modo CLI
-
-1. Clone ou faça download do repositório;
-```
-git clone https://github.com/david123ramos/CatDown.git CatDown && cd CatDown/
+cd Src/ && composer install
 ```
 
-2. Entre na pasta *"cli"* e faça a instalação dos módulos;
+<br>
+
+### Database
+
+1. Faça a inserção do banco de dados com o arquivo *lojinha.sql*, localizado na pasta *config/database/*;
 ```
-cd cli/ && npm install
+mysql -u root < config/database/lojinha.sql
 ```
 
-### Exemplos
- - Ajuda: ``node index.js --help``
- - Salvando em arquivo **.mp4**:  ``node index.js --url "https://www.youtube.com/watch?v=qrMwxe2ya5E" -o video.mp4``
- - Salvando com **stdout**: ``node index.js --url "https://www.youtube.com/watch?v=qrMwxe2ya5E" > video.mp4``
- 
-### License
-----
-
-**MIT**
--->
+## License
+[MIT](/license)
