@@ -22,7 +22,7 @@ class Router
         );
 
         if (array_key_exists($i, $this->routes)) {
-            if (file_exists(DIRREQ."App/Controllers/{$this->routes[$i]}.php")) {
+            if (file_exists(DIR_REQ."App/Controllers/{$this->routes[$i]}.php")) {
                 return $this->routes[$i];
             } else {
                 echo "bugo";

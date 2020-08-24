@@ -3,7 +3,7 @@
         <div class="news-letter">
             <div class="container">
                 <div class="logo">
-                    <img src="<?php echo DIRIMG; ?>home/10off.png" alt="">
+                    <img src="<?php echo DIR_IMG; ?>home/10off.png" alt="">
                 </div>
                 <form action="get">
                     <input type="text" name="nome" id="nome" placeholder="Nome:">

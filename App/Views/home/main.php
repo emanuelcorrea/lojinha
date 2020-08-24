@@ -7,7 +7,7 @@
             <ul>
                 <li>
                     <div class="item">
-                        <img src="<?php echo DIRIMG; ?>carousel/img-banner1.jpg" alt="Primeira imagem do Banner">
+                        <img src="<?php echo DIR_IMG; ?>carousel/img-banner1.jpg" alt="Primeira imagem do Banner">
                     </div>
                 </li>
             </ul>
@@ -17,7 +17,6 @@
         </div>
     </div>
 </section>
-
 <!-- Seção de camisas -->
 <section class="shirts section"">
     <div class=" container">
@@ -28,7 +27,7 @@
             <div class="list-products">
                 <ul class="owl-carousel">
                     <?php foreach ($this->getModel()->selectCamisas() as $produto) : $sub = $this->getModel()->selectNameByCat($produto->catSub)[0]['slug']; ?>
-                        <a href="<?php echo DIRPAGE . "produto/slug/" . $produto->productSlug; ?>" style="text-decoration: none;">
+                        <a href="<?php echo DIR_PATH . "produto/slug/" . $produto->productSlug; ?>" style="text-decoration: none;">
                             <li>
                                 <article class="product">
                                     <div class="product-image">
@@ -78,7 +77,7 @@
             <div class="list-products">
                 <ul class="owl-carousel">
                     <?php foreach ($this->getModel()->selectCalcas() as $produto) : $sub = $this->getModel()->selectNameByCat($produto->catSub)[0]['slug']; ?>
-                        <a href="<?php echo DIRPAGE . "produto/slug/" . $produto->productSlug; ?>" style="text-decoration: none;">
+                        <a href="<?php echo DIR_PATH . "produto/slug/" . $produto->productSlug; ?>" style="text-decoration: none;">
                             <li>
                                 <article class="product">
                                     <div class="product-image">
@@ -128,7 +127,7 @@
             <div class="list-products">
                 <ul class="owl-carousel">
                     <?php foreach ($this->getModel()->selectCalcados() as $produto) : $sub = $this->getModel()->selectNameByCat($produto->catSub)[0]['slug']; ?>
-                        <a href="<?php echo DIRPAGE . "produto/slug/" . $produto->productSlug; ?>" style="text-decoration: none;">
+                        <a href="<?php echo DIR_PATH . "produto/slug/" . $produto->productSlug; ?>" style="text-decoration: none;">
                             <li>
                                 <article class="product">
                                     <div class="product-image">

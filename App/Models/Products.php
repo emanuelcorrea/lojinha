@@ -28,6 +28,7 @@ class Products extends Crud
 
     public function selectCamisas()
     {
+        
         $this->setQuery("
             SELECT prod.name as productName, 
             prod.price as productPrice,

@@ -2,6 +2,7 @@
 namespace Src\Core;
 
 use Src\Core\Connection;
+use PDO, PDOException;
 
 abstract class Crud extends Connection
 {
@@ -23,11 +24,11 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                return $this->stmt->fetchAll(\PDO::FETCH_OBJ);
+                return $this->stmt->fetchAll(PDO::FETCH_OBJ);
             } else {
                 return false;
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
     }
@@ -43,11 +44,11 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                return $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
+                return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
             } else {
                 return false;
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
     }
@@ -63,11 +64,11 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                return $this->stmt->fetch(\PDO::FETCH_OBJ);
+                return $this->stmt->fetch(PDO::FETCH_OBJ);
             } else {
                 return false;
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
     }
@@ -83,11 +84,11 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                return $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
+                return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
             } else {
                 return false;
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         } 
     }
@@ -103,7 +104,7 @@ abstract class Crud extends Connection
             } else {
                 return false;
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
     }
@@ -115,11 +116,11 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                return $this->stmt->fetchAll(\PDO::FETCH_ASSOC);
+                return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
             } else {
                 return false;
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
     }
@@ -131,11 +132,11 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                return $this->stmt->fetchAll(\PDO::FETCH_OBJ);
+                return $this->stmt->fetchAll(PDO::FETCH_OBJ);
             } else {
                 return false;
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
     }
@@ -147,12 +148,12 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                return $this->stmt->fetchAll(\PDO::FETCH_OBJ);
+                return $this->stmt->fetchAll(PDO::FETCH_OBJ);
             } else {
                 return false;
             }
 
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
     }
@@ -181,11 +182,11 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                header("Location: ". DIRPAGE);
+                header("Location: ". DIR_PATH);
             } else {
                 $_SESSION['msg'] = "Erro.";
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
             exit;
         }
@@ -202,11 +203,11 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                header("Location: " . DIRPAGE . "painel");
+                header("Location: " . DIR_PATH . "painel");
             } else {
                 $_SESSION['msg'] = "Erro ao adicionar.";
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
     }
@@ -222,11 +223,11 @@ abstract class Crud extends Connection
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                header("Location: " . DIRPAGE . "painel");
+                header("Location: " . DIR_PATH . "painel");
             } else {
                 false;
             }
-        } catch (\PDOException $e) {
+        } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
             exit;
         }

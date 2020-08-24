@@ -1,2 +1,2 @@
-<link rel="stylesheet" href="<?php echo DIRCSS; ?>nice-select.css">
-<link rel="stylesheet" href="<?php echo DIRCSS; ?>nice-number.css">
+<link rel="stylesheet" href="<?php echo DIR_CSS; ?>nice-select.css">
+<link rel="stylesheet" href="<?php echo DIR_CSS; ?>nice-number.css">

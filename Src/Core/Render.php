@@ -7,42 +7,42 @@ class Render
 
     public function renderTemplate()
     {
-        require_once(DIRREQ.'App/Views/template.php');
+        require_once(DIR_REQ.'App/Views/template.php');
     }
 
     public function addHead()
     {
-        if (file_exists(DIRREQ."App/Views/{$this->getDir()}/head.php")) {
-            require_once(DIRREQ."App/Views/{$this->getDir()}/head.php");
+        if (file_exists(DIR_REQ."App/Views/{$this->getDir()}/head.php")) {
+            require_once(DIR_REQ."App/Views/{$this->getDir()}/head.php");
         } else {
-            require_once(DIRREQ.'App/Views/templates/head.php');
+            require_once(DIR_REQ.'App/Views/templates/head.php');
         }
     }
 
     public function addHeader()
     {
-        if (file_exists(DIRREQ."App/Views/{$this->getDir()}/header.php")) {
-            require_once(DIRREQ."App/Views/{$this->getDir()}/header.php");
+        if (file_exists(DIR_REQ."App/Views/{$this->getDir()}/header.php")) {
+            require_once(DIR_REQ."App/Views/{$this->getDir()}/header.php");
         } else {
-            require_once(DIRREQ.'App/Views/templates/header.php');
+            require_once(DIR_REQ.'App/Views/templates/header.php');
         }
     }
 
     public function addMain()
     {
-        if (file_exists(DIRREQ."App/Views/{$this->getDir()}/main.php")) {
-            require_once(DIRREQ."App/Views/{$this->getDir()}/main.php");
+        if (file_exists(DIR_REQ."App/Views/{$this->getDir()}/main.php")) {
+            require_once(DIR_REQ."App/Views/{$this->getDir()}/main.php");
         } else {
-            require_once(DIRREQ.'App/Views/templates/main.php');
+            require_once(DIR_REQ.'App/Views/templates/main.php');
         }
     }
 
     public function addFooter()
     {
-        if (file_exists(DIRREQ."App/Views/{$this->getDir()}/footer.php")) {
-            require_once(DIRREQ."App/Views/{$this->getDir()}/footer.php");
+        if (file_exists(DIR_REQ."App/Views/{$this->getDir()}/footer.php")) {
+            require_once(DIR_REQ."App/Views/{$this->getDir()}/footer.php");
         } else {
-            require_once(DIRREQ.'App/Views/templates/footer.php');
+            require_once(DIR_REQ.'App/Views/templates/footer.php');
         }
     }
 

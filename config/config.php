@@ -1,36 +1,18 @@
 <?php
-require_once('environment.php');
 require_once('../Src/vendor/autoload.php');
+require_once('environment.php');
 
-if (ENVIRONMENT === 'production') {
-    define('DBHOST', 'localhost');
-    define('DBNAME', 'lojinha');
-    define('DBUSER', 'root');
-    define('DBPASS', '');
-    
-    // Se o p rojeto estiver em uma pasta e não na raiz do www
-    $pasta = 'lojinha/';
-    define('DIRPAGE', "http://{$_SERVER['HTTP_HOST']}/$pasta");
+// Constantes de conexão com o banco de dados
+if (ENVIRONMENT == 'development') {
+    define('DB_HOST', 'localhost');
+    define('DB_PORT', 3306);
+    define('DB_NAME', 'lojinha');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
 } else {
-    define('DBHOST', 'localhost');
-    define('DBNAME', 'u126842498_lojinha');
-    define('DBUSER', 'u126842498_lojinha');
-    define('DBPASS', 'BoaeI`1!kH');
-
-    // Se o p rojeto estiver em uma pasta e não na raiz do www
-    $pasta = '';
-    define('DIRPAGE', "https://{$_SERVER['HTTP_HOST']}/$pasta");
+    define('DB_HOST', 'localhost');
+    define('DB_PORT', 3306);
+    define('DB_NAME', 'lojinha');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
 }
-
-if (substr($_SERVER['DOCUMENT_ROOT'], -1) == '/') {
-    define('DIRREQ', "{$_SERVER['DOCUMENT_ROOT']}$pasta");
-} else {
-    define('DIRREQ', "{$_SERVER['DOCUMENT_ROOT']}/$pasta");
-}
-
-define('DIRCSS', DIRPAGE.'public/assets/css/');
-define('DIRIMG', DIRPAGE.'public/assets/img/');
-define('DIRJVS', DIRPAGE.'public/assets/js/');
-define('DIRFNT', DIRPAGE.'public/assets/fonts/');
-define('DIRAUD', DIRPAGE.'public/assets/audio/');
-define('DIRVID', DIRPAGE.'public/assets/video/');

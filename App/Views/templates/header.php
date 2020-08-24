@@ -78,7 +78,7 @@
                                     <a href="#">Promoção</a>
                                     <div class="article-content">
                                         <a href="#">
-                                            <img src="<?php echo DIRIMG;?>/promotion/promotion-male.jpg" alt="" width="470px">
+                                            <img src="<?php echo DIR_IMG;?>/promotion/promotion-male.jpg" alt="" width="470px">
                                         </a>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@
                                     <a href="#">Promoção</a>
                                     <div class="article-content">
                                         <a href="#">
-                                            <img src="<?php echo DIRIMG;?>/promotion/promotion-female.jpg" alt="" width="470px">
+                                            <img src="<?php echo DIR_IMG;?>/promotion/promotion-female.jpg" alt="" width="470px">
                                         </a>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                                         <div class="roupas">
                                             <div class="category-box">
                                                 <div class="imagem">
-                                                    <img src="<?php echo DIRIMG;?>/products/camisa.jpeg" alt="" srcset="">
+                                                    <img src="<?php echo DIR_IMG;?>/products/camisa.jpeg" alt="" srcset="">
                                                 </div>
                                                 <div class="product">
                                                     <h2><a href="#">Camisetas</a></h2>
@@ -154,7 +154,7 @@
                                         <div class="calcas">
                                             <div class="category-box">
                                                 <div class="imagem">
-                                                    <img src="<?php echo DIRIMG;?>/products/calca.jpg" alt="" srcset="">
+                                                    <img src="<?php echo DIR_IMG;?>/products/calca.jpg" alt="" srcset="">
                                                 </div>
                                                 <div class="product">
                                                     <h2><a href="#">Calças</a></h2>
@@ -165,7 +165,7 @@
                                         <div class="calcas">
                                             <div class="category-box">
                                                 <div class="imagem">
-                                                    <img src="<?php echo DIRIMG;?>/products/bermuda.jpg" alt="" srcset="">
+                                                    <img src="<?php echo DIR_IMG;?>/products/bermuda.jpg" alt="" srcset="">
                                                 </div>
                                                 <div class="product">
                                                     <h2><a href="#">Bermudas</a></h2>
@@ -181,7 +181,7 @@
                                         <div class="sapato">
                                             <div class="category-box">
                                                 <div class="imagem">
-                                                    <img src="<?php echo DIRIMG;?>/products/calcado.jpg" alt="" srcset="">
+                                                    <img src="<?php echo DIR_IMG;?>/products/calcado.jpg" alt="" srcset="">
                                                 </div>
                                                 <div class="product">
                                                     <h2><a href="#">Sapato</a></h2>
@@ -192,7 +192,7 @@
                                         <div class="tenis">
                                             <div class="category-box">
                                                 <div class="imagem">
-                                                    <img src="<?php echo DIRIMG;?>/products/tenis.jpg" alt="" srcset="">
+                                                    <img src="<?php echo DIR_IMG;?>/products/tenis.jpg" alt="" srcset="">
                                                 </div>
                                                 <div class="product">
                                                     <h2><a href="#">Tênis</a></h2>
@@ -203,7 +203,7 @@
                                         <div class="chinelo">
                                             <div class="category-box">
                                                 <div class="imagem">
-                                                    <img src="<?php echo DIRIMG;?>/products/chinelo.jpg" alt="" srcset="">
+                                                    <img src="<?php echo DIR_IMG;?>/products/chinelo.jpg" alt="" srcset="">
                                                 </div>
                                                 <div class="product">
                                                     <h2><a href="#">Chinelo</a></h2>
@@ -219,7 +219,7 @@
                                         <div class="sapato">
                                             <div class="category-box">
                                                 <div class="imagem">
-                                                    <img src="<?php echo DIRIMG;?>/products/relogio.jpg" alt="" srcset="">
+                                                    <img src="<?php echo DIR_IMG;?>/products/relogio.jpg" alt="" srcset="">
                                                 </div>
                                                 <div class="product">
                                                     <h2><a href="#">Relógio</a></h2>
@@ -230,7 +230,7 @@
                                         <div class="tenis">
                                             <div class="category-box">
                                                 <div class="imagem">
-                                                    <img src="<?php echo DIRIMG;?>/products/oculos.jpg" alt="" srcset="">
+                                                    <img src="<?php echo DIR_IMG;?>/products/oculos.jpg" alt="" srcset="">
                                                 </div>
                                                 <div class="product">
                                                     <h2><a href="#">Óculos</a></h2>
@@ -241,7 +241,7 @@
                                         <div class="chinelo">
                                             <div class="category-box">
                                                 <div class="imagem">
-                                                    <img src="<?php echo DIRIMG;?>/products/colar.jpg" alt="" srcset="">
+                                                    <img src="<?php echo DIR_IMG;?>/products/colar.jpg" alt="" srcset="">
                                                 </div>
                                                 <div class="product">
                                                     <h2><a href="#">Pulseiras & Coláres</a></h2>
@@ -259,13 +259,13 @@
                         <div class="submenu-content">
                             <div class="content">
                                 <div class="img-banner">
-                                    <img src="<?php echo DIRIMG;?>sports/fitness.jpg" alt="">
+                                    <img src="<?php echo DIR_IMG;?>sports/fitness.jpg" alt="">
                                 </div>
                                 <div class="img-banner">
-                                    <img src="<?php echo DIRIMG;?>sports/ciclismo.jpg" alt="">
+                                    <img src="<?php echo DIR_IMG;?>sports/ciclismo.jpg" alt="">
                                 </div>
                                 <div class="img-banner">
-                                    <img src="<?php echo DIRIMG;?>sports/corrida.jpg" alt="">
+                                    <img src="<?php echo DIR_IMG;?>sports/corrida.jpg" alt="">
                                 </div>
                             </div> 
                         </div>      
