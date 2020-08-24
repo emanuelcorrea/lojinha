@@ -42,10 +42,10 @@ cd Src/ && composer install
 
 3. Altere as constantes de ambiente no arquivo *environment.php* localizado na pasta *config/* da raiz;
 ```
-vi config/environments.php
+vi config/environment.php
 -->
 
-1. <?php>
+1. <?php
 2. define('ENVIRONMENT', 'development');
 3. // define('ENVIRONMENT', 'production');
 4.
@@ -71,8 +71,8 @@ vi config/config.php
 if (ENVIRONMENT === 'development') {
     define('DB_HOST', 'localhost');
     define('DB_NAME', 'lojinha');
-    define('DB_USER', 'lojinha');
-    define('DB_PASS', 'lojinha');
+    define('DB_USER', 'root');
+    define('DB_PASS', '');
 }
 ```
 
