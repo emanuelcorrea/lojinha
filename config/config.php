@@ -3,6 +3,7 @@ require_once('../Src/vendor/autoload.php');
 require_once('environment.php');
 
 // Constantes de conexão com o banco de dados
+
 if (ENVIRONMENT == 'development') {
     define('DB_HOST', 'localhost');
     define('DB_PORT', 3306);
