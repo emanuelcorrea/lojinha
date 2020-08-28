@@ -2,8 +2,7 @@
 namespace App\Controllers;
 
 use Src\Core\Render;
-
-use App\Models\Products;
+use App\Models\CatalogModel;
 
 class HomeController extends Render
 {
@@ -11,7 +10,7 @@ class HomeController extends Render
 
     public function __construct()
     {
-        $this->model = new Products;
+        $this->model = new CatalogModel();
     }
     
     public function index()
@@ -21,7 +20,8 @@ class HomeController extends Render
         $this->renderTemplate();
     }
 
-    public function getModel() {
+    public function getModel()
+    {
         return $this->model;
     }
 }

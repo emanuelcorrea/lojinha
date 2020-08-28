@@ -1,3 +1,9 @@
+<?php
+
+$catalog = new App\Models\CatalogModel();
+
+?>
+
 <div class="information">
     <div class="container">
         <div class="rules">
@@ -45,7 +51,7 @@
                                     <a href="#">Roupas</a>
                                     <div class="article-content">
                                         <ul class="article-list">
-                                            <?php foreach ($this->getModel()->categoryBy(7) as $category): ?>
+                                            <?php foreach ($catalog->categoryBy(7) as $category): ?>
                                                 <li><?php echo $category->name; ?></li>
                                             <?php endforeach; ?>
                                             <li class="promo"><span>+ Promoções</span></li>
@@ -56,7 +62,7 @@
                                     <a href="#">Calçados</a>
                                     <div class="article-content">
                                         <ul class="article-list">
-                                            <?php foreach ($this->getModel()->categoryBy(8) as $category): ?>
+                                            <?php foreach ($catalog->categoryBy(8) as $category): ?>
                                                 <li><?php echo $category->name; ?></li>
                                             <?php endforeach; ?>
                                             <li class="promo"><span>+ Promoções</span></li>
@@ -67,7 +73,7 @@
                                     <a href="#">Acessórios</a>
                                     <div class="article-content">
                                         <ul class="article-list">
-                                            <?php foreach ($this->getModel()->categoryBy(9) as $category): ?>
+                                            <?php foreach ($catalog->categoryBy(9) as $category): ?>
                                                 <li><?php echo $category->name; ?></li>
                                             <?php endforeach; ?>
                                             <li class="promo"><span>+ Promoções</span></li>
@@ -93,7 +99,7 @@
                                     <a href="#">Roupas</a>
                                     <div class="article-content">
                                         <ul class="article-list">
-                                            <?php foreach ($this->getModel()->categoryBy(10) as $category): ?>
+                                            <?php foreach ($catalog->categoryBy(10) as $category): ?>
                                                 <li><?php echo $category->name; ?></li>
                                             <?php endforeach; ?>
                                             <li class="promo"><span>+ Promoções</span></li>
@@ -104,7 +110,7 @@
                                     <a href="#">Calçados</a>
                                     <div class="article-content">
                                         <ul class="article-list">
-                                            <?php foreach ($this->getModel()->categoryBy(11) as $category): ?>
+                                            <?php foreach ($catalog->categoryBy(11) as $category): ?>
                                                 <li><?php echo $category->name; ?></li>
                                             <?php endforeach; ?>
                                             <li class="promo"><span>+ Promoções</span></li>
@@ -115,7 +121,7 @@
                                     <a href="#">Acessórios</a>
                                     <div class="article-content">
                                         <ul class="article-list">
-                                            <?php foreach ($this->getModel()->categoryBy(12) as $category): ?>
+                                            <?php foreach ($catalog->categoryBy(12) as $category): ?>
                                                 <li><?php echo $category->name; ?></li>
                                             <?php endforeach; ?>
                                             <li class="promo"><span>+ Promoções</span></li>
