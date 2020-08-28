@@ -1,3 +1,9 @@
+<?php
+
+$catalog = new App\Models\CatalogModel();
+
+?>
+
 <footer class="footer-home">
     <section class="social">
         <div class="news-letter">
@@ -40,7 +46,7 @@
                             <li>
                                 <h6>Departamentos</h6>
                                 <ul>
-                                    <?php foreach($this->getModel()->getAllCategory() as $key => $value) :?>
+                                    <?php foreach($catalog->getAllCategory() as $key => $value) :?>
                                     <li><a href="<?php echo $value['name']; ?>"><?php echo $value['name']; ?></a></li>
                                     <?php endforeach; ?>
                                 </ul>

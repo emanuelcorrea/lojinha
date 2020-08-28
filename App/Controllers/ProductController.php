@@ -2,18 +2,20 @@
 namespace App\Controllers;
 
 use Src\Core\Render;
-
-use App\Models\Products;
+use Src\Traits\UrlParser;
+use App\Models\ProductModel;
 
 class ProductController extends Render
 {
-    private $model;
+    public $model;
+    
+    use UrlParser;
     
     public function __construct()
     {
-        $this->model = new Products;
+        $this->model = new ProductModel($this->parserUrl()[2]);
     }
-
+    
     public function slug($slug)
     {
         $this->setTitle('Produto');

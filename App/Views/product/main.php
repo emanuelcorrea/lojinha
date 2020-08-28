@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="product-images">
                     <div class="product-image-principal">
-                        <img id="img-principal" src="https://static.zattini.com.br/produtos/camisa-social-manga-longa-watkins&krown-masculina/14/IFZ-0006-014/IFZ-0006-014_zoom1.jpg" alt="" width="600">
+                        <img id="img-principal" src="<?php echo $this->model->getFirstImage(); ?>" alt="" width="600">
                     </div>
                     <div class="product-other-images">
                         <div class="owl-carousel owl-theme" style="width: 600px">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="product-details">
                     <div class="product-name">
-                        <h1>Camisa Social Manga Longa Watkins&Krown Masculina - <span>Ref: IFZ-0006-014-06</span></h1>
+                        <h1><?php echo $this->model->getName(); ?> - <span>Ref: <?php echo $this->model->getSku(); ?> </span></h1>
                     </div>
                     <div class="product-rate">
                         <ul>
@@ -35,11 +35,11 @@
                         <p>(<a href="#"><b>0</b> opiniões</a>)</p>
                     </div>
                     <div class="product-price">
-                        <h2><span>R$</span>55,99</h2>
-                        <p class="or">R$ 55,99</p>
+                        <h2><span>R$</span><?php echo $this->model->getPrice(); ?></h2>
+                        <p class="or">R$ <?php echo $this->model->getPriceBefore(); ?></p>
                     </div>
                     <div class="product-pre-description">
-                        <p>A camisa social manga longa da Watkins&Krown tem um ótimo acabamento, dando detalhes extraordinários e um conforto que faz a diferenciação de uma marca pra outra, mostrando garantia e qualidade.</p>
+                        <p><?php echo $this->model->getDescription(); ?></p>
                     </div>
                     <div class="line">
                         <div class="product-colors product-bg">
