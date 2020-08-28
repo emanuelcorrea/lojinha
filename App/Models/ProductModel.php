@@ -1,29 +1,16 @@
 <?php
 namespace App\Models;
 
-use Src\Core\Crud;
+use App\Models\AbstractProductModel;
 
-class ProductModel extends Crud
+class ProductModel extends AbstractProductModel
 {
     protected $product;
-    
-    public function __construct($slug)
-    {
-        $this->loadProductBySlug($slug);
-    }
-    
-    protected function loadProductBySlug($slug)
-    {
-        $this->setQuery(
-            "SELECT
-                *
-            FROM
-                products
-            WHERE
-                slug = '$slug'"
-        );
 
-        $this->product = $this->executeQuery()[0];
+    public function __construct(
+        $slug
+    ) {
+        parent::__construct(['slug' => $slug]);
     }
 
     public function getName()
@@ -51,8 +38,15 @@ class ProductModel extends Crud
         return $this->product->description;
     }
 
-    public function getImagePrincipal()
+    public function getCollectionImages()
     {
-        return DIR_IMG . 'products/' . str_replace('-', '', $this->getSku()) . '/' .  str_replace('-', '', $this->getSku()) . '_01.jpg';
+
+    }
+
+    public function getFirstImage()
+    {
+        return DIR_IMG . 'products/' . 
+            str_replace('-', '', $this->getSku()) . '/' .  
+            str_replace('-', '', $this->getSku()) . '_01.jpg';
     }
 }

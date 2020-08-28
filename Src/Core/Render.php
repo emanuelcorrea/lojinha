@@ -46,10 +46,6 @@ class Render
         }
     }
 
-    public function model($model, $param = null) {
-        return $this->getModel()->$model($param);
-    }
-
     public function getTitle() {
         return $this->title;
     }

@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="product-images">
                     <div class="product-image-principal">
-                        <img id="img-principal" src="<?php echo $this->model->getImagePrincipal(); ?>" alt="" width="600">
+                        <img id="img-principal" src="<?php echo $this->model->getFirstImage(); ?>" alt="" width="600">
                     </div>
                     <div class="product-other-images">
                         <div class="owl-carousel owl-theme" style="width: 600px">

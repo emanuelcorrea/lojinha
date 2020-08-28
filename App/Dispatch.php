@@ -9,7 +9,7 @@ class Dispatch extends Router
     
     public function __construct()
     {
-        self::addController();
+        $this->addController();
     }
 
     public function addController()
@@ -25,13 +25,13 @@ class Dispatch extends Router
             $this->setMethod('index');
         }
 
-        self::addMethod();
+        $this->addMethod();
     }
 
     public function addMethod()
     {
         if (method_exists($this->obj, $this->getMethod())) {
-            self::addParam();
+            $this->addParam();
 
             call_user_func_array([$this->obj, $this->getMethod()], $this->getParam());
         } else {
