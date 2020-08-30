@@ -5,17 +5,11 @@ use App\Models\AbstractProductModel;
 
 class ProductModel extends AbstractProductModel
 {
-    protected $product;
-
-    public function __construct(
-        $slug
-    ) {
-        parent::__construct(['slug' => $slug]);
-    }
+    public function __construct() {}
 
     public function getName()
     {
-        return $this->product->name;
+        return $this->product->prodName;
     }
 
     public function getSku()

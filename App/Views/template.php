@@ -3,7 +3,7 @@
 <html lang="pt-BR">
     <head>
         <!-- Title -->
-        <title><?php echo $this->getTitle(); ?> - Lojinha</title>
+        <title><?php echo self::getTitle(); ?> - Lojinha</title>
 
         <!-- Meta Tags -->
         <meta charset="UTF-8">
@@ -20,13 +20,13 @@
         <link href="https://fonts.googleapis.com/css?family=Cabin|Montserrat&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700&display=swap" rel="stylesheet">
 
-        <?php $this->addHead(); ?>
+        <?php self::addHead(); ?>
     </head>
 
     <body>
-        <?php $this->addHeader(); ?>
-        <?php $this->addMain(); ?>
-        <?php $this->addFooter(); ?>
+        <?php self::addHeader(); ?>
+        <?php self::addMain(); ?>
+        <?php self::addFooter(); ?>
 
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script src="<?php echo DIR_JVS; ?>jquery.js"></script>

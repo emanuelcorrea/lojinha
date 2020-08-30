@@ -8,12 +8,14 @@ use App\Models\ProductModel;
 class ProductController extends Render
 {
     public $model;
-    
+
     use UrlParser;
-    
+
     public function __construct()
     {
-        $this->model = new ProductModel($this->parserUrl()[2]);
+        $this->model = new ProductModel();
+        
+        $this->model->load('slug', $this->parserUrl()[2]);
     }
     
     public function slug($slug)
