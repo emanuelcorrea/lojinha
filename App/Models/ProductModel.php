@@ -14,33 +14,35 @@ class ProductModel extends AbstractProductModel
 
     public function getSku()
     {
-        return $this->product->sku;
+        return $this->product->prodSku;
     }
 
     public function getPrice()
     {
-        return $this->product->price;
+        return $this->product->prodPrice;
     }
 
     public function getPriceBefore()
     {
-        return $this->product->price_before;
+        return $this->product->prodPricebefore;
     }
 
     public function getDescription()
     {
-        return $this->product->description;
+        return $this->product->prodDescription;
     }
 
-    public function getCollectionImages()
+    public function getImageByPosition($position)
     {
-
+        return DIR_IMG . 'products/LJA000' . 
+            str_replace('-', '', $this->getSku()) . '/LJA000' .  
+            str_replace('-', '', $this->getSku()) . "_0$position.jpg";
     }
 
-    public function getFirstImage()
+    public function getQtyImages()
     {
-        return DIR_IMG . 'products/' . 
-            str_replace('-', '', $this->getSku()) . '/' .  
-            str_replace('-', '', $this->getSku()) . '_01.jpg';
+        $dir = DIR_REQ .'public/assets/images/products/LJA000' . str_replace('-', '', $this->getSku()) . '/';
+
+        return count(scandir($dir)) - 2;
     }
 }

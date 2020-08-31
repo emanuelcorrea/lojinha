@@ -4,19 +4,15 @@
             <div class="container">
                 <div class="product-images">
                     <div class="product-image-principal">
-                        <img id="img-principal" src="<?php echo $this->model->getFirstImage(); ?>" alt="" width="600">
+                        <img id="img-principal" src="<?php echo $this->model->getImageByPosition(1); ?>" alt="" width="600">
                     </div>
                     <div class="product-other-images">
                         <div class="owl-carousel owl-theme" style="width: 600px">
-                            <div class="item" class="ativado">
-                                <img id="1" src="https://static.zattini.com.br/produtos/camisa-social-manga-longa-watkins&krown-masculina/14/IFZ-0006-014/IFZ-0006-014_zoom1.jpg" alt="" width="70">
-                            </div>
-                            <div class="item">
-                                <img id="2" src="https://static.zattini.com.br/produtos/camisa-social-manga-longa-watkins&krown-masculina/14/IFZ-0006-014/IFZ-0006-014_zoom2.jpg" alt="" width="70">
-                            </div>
-                            <div class="item">
-                                <img id="3" src="https://static.zattini.com.br/produtos/camisa-social-manga-longa-watkins&krown-masculina/14/IFZ-0006-014/IFZ-0006-014_zoom3.jpg" alt="" width="70">
-                            </div>
+                            <?php for($index = 1; $index < $this->model->getQtyImages()+1; $index++) { ?>
+                                <div class="item" class="ativado">
+                                    <img id="<?php echo $index; ?>" src="<?php echo $this->model->getImageByPosition($index); ?>" width="70">
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -35,8 +31,8 @@
                         <p>(<a href="#"><b>0</b> opiniões</a>)</p>
                     </div>
                     <div class="product-price">
-                        <h2><span>R$</span><?php echo $this->model->getPrice(); ?></h2>
-                        <p class="or">R$ <?php echo $this->model->getPriceBefore(); ?></p>
+                        <h2><span>R$</span><?php echo number_format($this->model->getPrice(), 2, ',', '.'); ?></h2>
+                        <p class="or">R$ <?php echo number_format($this->model->getPriceBefore(), 2, ',', '.'); ?></p>
                     </div>
                     <div class="product-pre-description">
                         <p><?php echo $this->model->getDescription(); ?></p>

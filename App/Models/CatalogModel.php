@@ -31,8 +31,9 @@ class CatalogModel extends Crud
         
         $this->setQuery("
             SELECT prod.name as productName, 
+            prod.sku as prodSku,
             prod.price as productPrice,
-            prod.price as productPriceBefore,
+            prod.price_before as productPriceBefore,
             prod.url_img as productImg,
             prod.slug as productSlug,
             prod.rate as productRate,

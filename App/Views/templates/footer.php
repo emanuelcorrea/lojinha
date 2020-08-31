@@ -56,11 +56,11 @@ $catalog = new App\Models\CatalogModel();
                                 <ul>
                                     <li><a href="#">Sobre a Lojinha</a></li>
                                     <li><a href="#">Nossas Lojas</a></li>
-                                    <li><a href="#">Lojas Marisa Celular</a></li>
+                                    <li><a href="#">Lojas Lojinha Celular</a></li>
                                     <li><a href="#">Investidores</a></li>
                                     <li><a href="#">Termos de Segurança</a></li>
                                     <li><a href="#">Imprensa</a></li>
-                                    <li><a href="#">Cartão Marisa</a></li>
+                                    <li><a href="#">Cartão Lojinha</a></li>
                                     <li><a href="#">Mapa do Site</a></li>
                                     <li><a href="#">Sax Financeira</a></li>
                                     <li><a href="#">Certificados</a></li>

@@ -31,7 +31,7 @@
                             <li>
                                 <article class="product">
                                     <div class="product-image">
-                                        <img src="<?php echo $produto->productImg; ?>" width="300">
+                                        <img src="<?php echo DIR_IMG . 'products/LJA000' . str_replace('-', '', $produto->prodSku) . '/LJA000' . str_replace('-', '', $produto->prodSku) . '_01.jpg'; ?>" width="300">
                                     </div>
                                     <div class="loved">
                                         <i class="fas fa-heart"></i>
