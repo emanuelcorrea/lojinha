@@ -4,13 +4,13 @@
             <div class="container">
                 <div class="product-images">
                     <div class="product-image-principal">
-                        <img id="img-principal" src="<?php echo $this->model->getImageByPosition(1); ?>" alt="" width="600">
+                        <img id="img-principal" src="<?php echo $this->product->getImageByPosition(1); ?>" alt="" width="600">
                     </div>
                     <div class="product-other-images">
                         <div class="owl-carousel owl-theme" style="width: 600px">
-                            <?php for($index = 1; $index < $this->model->getQtyImages()+1; $index++) { ?>
+                            <?php for($index = 1; $index < $this->product->getQtyImages()+1; $index++) { ?>
                                 <div class="item" class="ativado">
-                                    <img id="<?php echo $index; ?>" src="<?php echo $this->model->getImageByPosition($index); ?>" width="70">
+                                    <img id="<?php echo $index; ?>" src="<?php echo $this->product->getImageByPosition($index); ?>" width="70">
                                 </div>
                             <?php } ?>
                         </div>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="product-details">
                     <div class="product-name">
-                        <h1><?php echo $this->model->getName(); ?> - <span>Ref: <?php echo $this->model->getSku(); ?> </span></h1>
+                        <h1><?php echo $this->product->getName(); ?> - <span>Ref: <?php echo $this->product->getSku(); ?> </span></h1>
                     </div>
                     <div class="product-rate">
                         <ul>
@@ -31,11 +31,11 @@
                         <p>(<a href="#"><b>0</b> opiniões</a>)</p>
                     </div>
                     <div class="product-price">
-                        <h2><span>R$</span><?php echo number_format($this->model->getPrice(), 2, ',', '.'); ?></h2>
-                        <p class="or">R$ <?php echo number_format($this->model->getPriceBefore(), 2, ',', '.'); ?></p>
+                        <h2><span>R$</span><?php echo number_format($this->product->getPrice(), 2, ',', '.'); ?></h2>
+                        <p class="or">R$ <?php echo number_format($this->product->getPriceBefore(), 2, ',', '.'); ?></p>
                     </div>
                     <div class="product-pre-description">
-                        <p><?php echo $this->model->getDescription(); ?></p>
+                        <p><?php echo $this->product->getDescription(); ?></p>
                     </div>
                     <div class="line">
                         <div class="product-colors product-bg">

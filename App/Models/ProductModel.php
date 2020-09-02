@@ -5,11 +5,14 @@ use App\Models\AbstractProductModel;
 
 class ProductModel extends AbstractProductModel
 {
-    public function __construct() {}
-
     public function getName()
     {
         return $this->product->prodName;
+    }
+
+    public function getAttributeGroupId()
+    {
+        return $this->product->prodAttributeGroupId;
     }
 
     public function getSku()
@@ -30,6 +33,31 @@ class ProductModel extends AbstractProductModel
     public function getDescription()
     {
         return $this->product->prodDescription;
+    }
+
+    public function getStatus()
+    {
+        return $this->product->prodStatus;
+    }
+
+    public function getType()
+    {
+        return $this->product->prodType;
+    }
+
+    public function getWeight()
+    {
+        return $this->product->prodWeight;
+    }
+
+    public function getCreatedAt()
+    {
+        return $this->product->prodCreatedAt;
+    }
+
+    public function getUpdatedAt()
+    {
+        return $this->product->prodUpdatedAt;
     }
 
     public function getImageByPosition($position)

@@ -20,7 +20,7 @@ class CatalogModel extends Crud
     public function categoryBy($id)
     {
         $this->setQuery(
-            "SELECT * FROM categories INNER JOIN subcategories ON categories.id_category = subcategories.id_category WHERE categories.id_category = $id"
+            "SELECT * FROM products_categories INNER JOIN products_subcategories ON categories.id_category = subcategories.id_category WHERE categories.id_category = $id"
         );
 
         return $this->executeQuery();
@@ -46,8 +46,8 @@ class CatalogModel extends Crud
             cat.subcategory as catSub,
             cat.slug as catSlug
             FROM products as prod 
-            INNER JOIN subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
-            INNER JOIN categories as cat ON cat.id_category = sub.id_category 
+            INNER JOIN products_subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
+            INNER JOIN products_categories as cat ON cat.id_category = sub.id_category 
             WHERE prod.id_subcategory = 10 OR prod.id_subcategory = 30
             ORDER BY id_product"
         );
@@ -74,8 +74,8 @@ class CatalogModel extends Crud
             cat.subcategory as catSub,
             cat.slug as catSlug
             FROM products as prod 
-            INNER JOIN subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
-            INNER JOIN categories as cat ON cat.id_category = sub.id_category 
+            INNER JOIN products_subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
+            INNER JOIN products_categories as cat ON cat.id_category = sub.id_category 
             WHERE prod.id_subcategory IN (28, 29, 13, 14, 16)
             ORDER BY id_product"
         );
@@ -102,8 +102,8 @@ class CatalogModel extends Crud
             cat.subcategory as catSub,
             cat.slug as catSlug
             FROM products as prod 
-            INNER JOIN subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
-            INNER JOIN categories as cat ON cat.id_category = sub.id_category 
+            INNER JOIN products_subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
+            INNER JOIN products_categories as cat ON cat.id_category = sub.id_category 
             WHERE prod.id_subcategory = 44 OR prod.id_subcategory = 53 OR prod.id_subcategory = 45 OR prod.id_subcategory = 5
             ORDER BY id_product"
         );
@@ -113,7 +113,7 @@ class CatalogModel extends Crud
 
     public function selectNameByCat($id)
     {
-        $this->setQuery("SELECT categories.slug as slug FROM categories WHERE id_category = $id");
+        $this->setQuery("SELECT categories.slug as slug FROM products_categories WHERE id_category = $id");
 
         return $this->executeAssoc();
     }
