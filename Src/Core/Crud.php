@@ -8,7 +8,7 @@ abstract class Crud extends Connection
 {
     private $table, $query, $stmt;
 
-    public function __construct($table)
+    public function __construct($table = false)
     {
         $this->table = $table;
     }

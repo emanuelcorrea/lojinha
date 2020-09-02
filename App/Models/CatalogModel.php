@@ -12,7 +12,7 @@ class CatalogModel extends Crud
 
     public function getAllCategory()
     {
-        parent::__construct('categories');
+        parent::__construct('products_categories');
 
         return $this->selectAssoc();
     }
@@ -20,7 +20,7 @@ class CatalogModel extends Crud
     public function categoryBy($id)
     {
         $this->setQuery(
-            "SELECT * FROM products_categories INNER JOIN products_subcategories ON categories.id_category = subcategories.id_category WHERE categories.id_category = $id"
+            "SELECT * FROM products_categories INNER JOIN products_subcategories ON products_categories.id_category = products_subcategories.id_category WHERE products_categories.id_category = $id"
         );
 
         return $this->executeQuery();
@@ -113,7 +113,7 @@ class CatalogModel extends Crud
 
     public function selectNameByCat($id)
     {
-        $this->setQuery("SELECT categories.slug as slug FROM products_categories WHERE id_category = $id");
+        $this->setQuery("SELECT products_categories.slug as slug FROM products_categories WHERE id_category = $id");
 
         return $this->executeAssoc();
     }

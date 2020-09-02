@@ -3,14 +3,18 @@ namespace App\Models;
 
 use Src\Core\Crud;
 
-abstract class AbstractProductModel extends Crud
+abstract class AbstractProductModel extends AbstractModel
 {
     protected $product;
 
-    public function __construct() {}
-    
     public function loadBy($field, $value)
     {
+        $condition = "prod.$field = '$value'";
+
+        if ((int)$value) {
+            $condition = "prod.$field = $value";
+        }
+        
         $this->setQuery(
             "SELECT 
                 prod.id_product AS prodIdproduct,
@@ -41,7 +45,7 @@ abstract class AbstractProductModel extends Crud
                 INNER JOIN products_subcategories sub ON sub.id_subcategory = prod.id_subcategory
                 INNER JOIN products_categories cat ON cat.id_category = sub.id_category
             WHERE
-                prod.$field = '{$value}'
+                $condition
             LIMIT
                 1"
         );
@@ -53,4 +57,6 @@ abstract class AbstractProductModel extends Crud
         // print_r($this->product);
         // echo "</pre>";
     }
+
+
 }
