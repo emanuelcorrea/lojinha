@@ -77,4 +77,4 @@ if (ENVIRONMENT === 'development') {
 ```
 
 ## License
-[MIT](/license)
+[MIT](https://github.com/emanuelcorrea/lojinha/blob/master/LICENSE)
