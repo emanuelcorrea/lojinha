@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-use App\Models\AbstractProductModel;
+use App\Models\Abstracts\AbstractProductModel;
 
 use App\Interfaces\ProductInterface;
 

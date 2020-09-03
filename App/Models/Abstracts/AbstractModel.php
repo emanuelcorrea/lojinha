@@ -1,5 +1,5 @@
 <?php
-namespace App\Models;
+namespace App\Models\Abstracts;
 
 abstract class AbstractModel extends \Src\Core\Crud
 {
