@@ -3,6 +3,41 @@ namespace App\Interfaces;
 
 interface ProductInterface
 {
+    const SKU = 'prodSku';
+
+    const NAME = 'prodName';
+
+    const DESCRIPTION = 'prodDescription';
+
+    const PRICE = 'prodPrice';
+
+    const PRICE_BEFORE = 'prodPriceBefore';
+
+    const WEIGHT = 'prodWeight';
+
+    const STATUS = 'prodStatus';
+
+    const ATTRIBUTE_GROUP_ID = 'prodAttributeGroupId';
+
+    const ID_TYPE = 'prodType';
+
+    const CREATED_AT = 'prodCreatedAt';
+
+    const UPDATED_AT = 'prodUpdatedAt';
+
+    const ATTRIBUTES = [
+        self::SKU,
+        self::NAME,
+        self::DESCRIPTION,
+        self::PRICE,
+        self::WEIGHT,
+        self::STATUS,
+        self::ATTRIBUTE_GROUP_ID,
+        self::ID_TYPE,
+        self::CREATED_AT,
+        self::UPDATED_AT
+    ];
+
     /**
      * Get product name
      *

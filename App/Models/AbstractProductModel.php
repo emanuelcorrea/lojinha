@@ -5,8 +5,6 @@ use Src\Core\Crud;
 
 abstract class AbstractProductModel extends AbstractModel
 {
-    protected $product;
-
     public function loadBy($field, $value)
     {
         $condition = "prod.$field = '$value'";
@@ -50,7 +48,7 @@ abstract class AbstractProductModel extends AbstractModel
                 1"
         );
 
-        $this->product = $this->executeQuery()[0];
+        $this->setData($this->executeAssoc()[0]);
 
         // echo "<pre>";
         // echo "SELECT *, prod.name AS prodName, sub.name AS subName, sub.slug AS subSlug, cat.name AS catName, cat.slug AS catSlug FROM products prod INNER JOIN subcategories sub ON sub.id_category = prod.id_subcategory INNER JOIN categories cat ON cat.id_category = sub.id_category WHERE prod.$field = '$value'";

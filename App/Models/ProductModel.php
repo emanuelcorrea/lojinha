@@ -5,7 +5,8 @@ use App\Models\AbstractProductModel;
 
 use App\Interfaces\ProductInterface;
 
-class ProductModel extends AbstractProductModel implements ProductInterface
+class ProductModel extends AbstractProductModel implements
+    ProductInterface
 {
     /**
      * Get product name
@@ -14,7 +15,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getName()
     {
-        return $this->product->prodName;
+        return $this->getData(self::NAME);
     }
 
     /**
@@ -24,7 +25,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getAttributeGroupId()
     {
-        return $this->product->prodAttributeGroupId;
+        return $this->getData(self::ATTRIBUTE_GROUP_ID);
     }
 
     /**
@@ -34,7 +35,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getSku()
     {
-        return $this->product->prodSku;
+        return $this->getData(self::SKU);
     }
 
     /**
@@ -44,7 +45,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getPrice()
     {
-        return $this->product->prodPrice;
+        return $this->getData(self::PRICE);
     }
 
     /**
@@ -54,7 +55,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getPriceBefore()
     {
-        return $this->product->prodPricebefore;
+        return $this->getData(self::PRICE_BEFORE);
     }
 
     /**
@@ -64,7 +65,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getDescription()
     {
-        return $this->product->prodDescription;
+        return $this->getData(self::DESCRIPTION);
     }
 
     /**
@@ -74,7 +75,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getStatus()
     {
-        return $this->product->prodStatus;
+        return $this->getData(self::STATUS);
     }
 
     /**
@@ -84,7 +85,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getType()
     {
-        return $this->product->prodType;
+        return $this->getData(self::ID_TYPE);
     }
 
     /**
@@ -94,7 +95,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getWeight()
     {
-        return $this->product->prodWeight;
+        return $this->getData(self::WEIGHT);
     }
 
     /**
@@ -104,7 +105,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getCreatedAt()
     {
-        return $this->product->prodCreatedAt;
+        return $this->getData(self::CREATED_AT);
     }
 
     /**
@@ -114,7 +115,7 @@ class ProductModel extends AbstractProductModel implements ProductInterface
      */
     public function getUpdatedAt()
     {
-        return $this->product->prodUpdatedAt;
+        return $this->getData(self::UPDATED_AT);
     }
 
     /**
