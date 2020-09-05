@@ -3,10 +3,13 @@ namespace Src\Core;
 
 use Src\Core\Connection;
 use PDO, PDOException;
+use Src\Traits\ProtectString;
 
 abstract class Crud extends Connection
 {
     private $table, $query, $stmt;
+
+    use ProtectString;
 
     public function __construct($table = false)
     {

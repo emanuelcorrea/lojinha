@@ -1,47 +1,52 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\DashboardModel;
 use Src\Core\Render;
 
 class DashboardController extends Render
 {
-    public function index()
+    protected $dashboard;
+    protected $name;
+    
+    public function __construct()
     {
-        if (!$_SESSION['logged']) {
-            header('Location: ' . DIR_PATH . 'dashboard/login/');
-        }
-
-        echo 'Logado';
+        $this->dashboard = new DashboardModel();
     }
 
-    public function login($oi)
+    public function index()
     {
-        if (empty($_POST['user_admin']) || empty($_POST['password_admin'])) {
-            $this->setDir('dashboard');
-            $this->setTitle('Painel Administrativo');
+        if (!$_SESSION['logged'])
+            return header('Location: ' . DIR_PATH . 'dashboard/login/');
+
+        $this->setDir('dashboard');
+        $this->setTitle('Página Inicial - Painel Adminstrativo | Lojinha');
+        $this->renderTemplate();
+    }
+
+    public function login()
+    {
+        if (isset($_POST['user_admin']) && isset($_POST['password_admin'])) {
+            if (!empty($_POST['user_admin']) || !empty($_POST['password_admin'])) {
+                $this->dashboard->authenticate($_POST['user_admin'], $_POST['password_admin']);
+            }
+        }
+        
+        if (!isset($_SESSION['logged']) || !$_SESSION['logged']) {
+            $this->setDir('dashboard/login');
+            $this->setTitle('Login - Painel Administrativo | Lojinha');
             $this->renderTemplate();
         } else {
-            $user_admin = $this->protect($_POST['user_admin']);
-            $password_admin = $this->protect($_POST['password_admin']);
-            
-            $_SESSION['logged'] = true;
-            
+            $this->dashboard->authenticate($_POST['user_admin'], $_POST['password_admin']);
             header('Location: ' . DIR_PATH . 'dashboard/');
         }
     }
 
-    function protect( $str ) {
-        /*** Função para retornar uma string/Array protegidos contra SQL/Blind/XSS Injection*/
-        if( !is_array( $str ) ) {                      
-                $str = preg_replace( '/(from|select|insert|delete|where|drop|union|order|update|database)/i', '', $str );
-                $str = preg_replace( '/(&lt;|<)?script(\/?(&gt;|>(.*))?)/i', '', $str );
-                $tbl = get_html_translation_table( HTML_ENTITIES );
-                $tbl = array_flip( $tbl );
-                $str = addslashes( $str );
-                $str = strip_tags( $str );
-                return strtr( $str, $tbl );
-        } else {
-                return array_filter( $str, "protect" );
-        }
+    public function logoff()
+    {
+        unset($_SESSION);
+        session_destroy();
+
+        header('Location: ' . DIR_PATH . 'dashboard/');
     }
 }

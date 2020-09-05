@@ -3,7 +3,7 @@ namespace App\Models\Abstracts;
 
 abstract class AbstractModel extends \Src\Core\Crud
 {
-    protected $data = [];
+    private $data = [];
 
     /**
      * Get the value of data
@@ -11,10 +11,16 @@ abstract class AbstractModel extends \Src\Core\Crud
      * @param string $index
      * @return mixed
      */
-    protected function getData($index)
+    public function getData($index = false)
     {
-        if (isset($this->data[$index])) {
-            return $this->data[$index];
+        if ($index) {
+            if (isset($this->data[$index])) {
+                return $this->data[$index];
+            }
+        }
+
+        if (!empty($this->data)) {
+            return $this->data;
         }
 
         return null;
