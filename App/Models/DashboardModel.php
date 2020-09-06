@@ -8,13 +8,22 @@ class DashboardModel extends AbstractDashboardModel implements
     AdminUserInterface
 {
     /**
+     * Get admin id
+     *
+     * @return int
+     */
+    public function getAdminId() {
+        return $this->getSession(self::ADMIN_ID);
+    }
+    
+    /**
      * Get admin first name
      *
      * @return string
      */
     public function getFirstName()
     {
-        return $this->getData(self::FIRST_NAME);
+        return $this->getSession(self::FIRST_NAME);
     }
 
     /**
@@ -24,7 +33,7 @@ class DashboardModel extends AbstractDashboardModel implements
      */
     public function getLastName()
     {
-        return $this->getData(self::LAST_NAME);
+        return $this->getSession(self::LAST_NAME);
     }
 
     /**
@@ -34,7 +43,7 @@ class DashboardModel extends AbstractDashboardModel implements
      */
     public function getFullName()
     {
-        return $this->getData(self::FIRST_NAME) . ' ' . $this->getData(self::LAST_NAME);
+        return $this->getSession(self::FIRST_NAME) . ' ' . $this->getSession(self::LAST_NAME);
     }
 
     /**
@@ -42,9 +51,9 @@ class DashboardModel extends AbstractDashboardModel implements
      *
      * @return string
      */
-    public function getUser()
+    public function getUsername()
     {
-        return $this->getData(self::USER);
+        return $this->getSession(self::USERNAME);
     }
 
     /**
@@ -54,7 +63,7 @@ class DashboardModel extends AbstractDashboardModel implements
      */
     public function getUserGroupId()
     {
-        return $this->getData(self::USER_GROUP_ID);
+        return $this->getSession(self::USER_GROUP_ID);
     }
 
     /**
@@ -64,7 +73,7 @@ class DashboardModel extends AbstractDashboardModel implements
      */
     public function getPassword()
     {
-        return $this->getData(self::PASSWORD);
+        return $this->getSession(self::PASSWORD);
     }
 
     /**
@@ -74,7 +83,7 @@ class DashboardModel extends AbstractDashboardModel implements
      */
     public function getStatus()
     {
-        return $this->getData(self::STATUS);
+        return $this->getSession(self::STATUS);
     }
 
     /**
@@ -84,7 +93,7 @@ class DashboardModel extends AbstractDashboardModel implements
      */
     public function getCreatedAt()
     {
-        return $this->getData(self::CREATED_AT);
+        return $this->getSession(self::CREATED_AT);
     }
 
     /**
@@ -94,6 +103,20 @@ class DashboardModel extends AbstractDashboardModel implements
      */
     public function getUpdatedAt()
     {
-        return $this->getData(self::UPDATED_AT);
+        return $this->getSession(self::UPDATED_AT);
+    }
+
+    /**
+     * Verify session status
+     *
+     * @return bool
+     */
+    public function isSessionExists()
+    {
+        if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+            return false;
+        }
+
+        return true;
     }
 }

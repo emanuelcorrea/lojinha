@@ -28,7 +28,10 @@ class DashboardController extends Render
     {
         if (isset($_POST['user_admin']) && isset($_POST['password_admin'])) {
             if (!empty($_POST['user_admin']) || !empty($_POST['password_admin'])) {
-                $this->dashboard->authenticate($_POST['user_admin'], $_POST['password_admin']);
+                $username = filter_var($_POST['user_admin'], FILTER_SANITIZE_STRING);
+                $password = filter_var($_POST['password_admin'], FILTER_SANITIZE_STRING);
+
+                $this->dashboard->authenticate($username, $password);
             }
         }
         
@@ -37,7 +40,6 @@ class DashboardController extends Render
             $this->setTitle('Login - Painel Administrativo | Lojinha');
             $this->renderTemplate();
         } else {
-            $this->dashboard->authenticate($_POST['user_admin'], $_POST['password_admin']);
             header('Location: ' . DIR_PATH . 'dashboard/');
         }
     }

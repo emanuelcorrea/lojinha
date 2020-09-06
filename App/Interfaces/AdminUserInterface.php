@@ -3,15 +3,19 @@ namespace App\Interfaces;
 
 interface AdminUserInterface
 {
+    const ENTITY = 'admin_users';
+
+    const ADMIN_ID = 'admin_id';
+    
     const FIRST_NAME = 'firstname';
 
     const LAST_NAME = 'lastname';
 
     const EMAIL = 'email';
 
-    const USER = 'user';
+    const USERNAME = 'username';
 
-    const USER_GROUP_ID = 'id_user_group';
+    const USER_GROUP_ID = 'group_id';
 
     const PASSWORD = 'password';
 
@@ -22,16 +26,24 @@ interface AdminUserInterface
     const UPDATED_AT = 'updated_at';
 
     const FIELDS = [
+        self::ADMIN_ID,
         self::FIRST_NAME,
         self::LAST_NAME,
         self::EMAIL,
-        self::USER,
+        self::USERNAME,
         self::USER_GROUP_ID,
         self::PASSWORD,
         self::STATUS,
         self::CREATED_AT,
         self::UPDATED_AT
     ];
+
+    /**
+     * Get admin id
+     *
+     * @return int
+     */
+    public function getAdminId();
 
     /**
      * Get admin first name
@@ -59,7 +71,7 @@ interface AdminUserInterface
      *
      * @return string
      */
-    public function getUser();
+    public function getUsername();
 
     /**
      * Get admin group id

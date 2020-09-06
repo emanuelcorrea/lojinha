@@ -42,4 +42,40 @@ abstract class AbstractModel extends \Src\Core\Crud
 
         return null;
     }
+
+    /**
+     * Get the value of session
+     *
+     * @param string $index
+     * @return mixed
+     */
+    public function getSession($index = false)
+    {
+        if ($index) {
+            if (isset($_SESSION['admin'][$index])) {
+                return $_SESSION['admin'][$index];
+            }
+        }
+
+        if (!empty($_SESSION['admin'])) {
+            return $_SESSION['admin'];
+        }
+    }
+
+    /**
+     * Set values to session
+     *
+     * @param array $data
+     * @return mixed
+     */
+    protected function setSession($index, $data)
+    {
+        if ($data) {
+            $_SESSION[$index] = $data;
+
+            return $this;
+        }
+
+        return null;
+    }
 }

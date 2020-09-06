@@ -1,5 +1,9 @@
 <?php
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_cache_expire(60);
+    session_start();
+}
+
 ob_start();
 
 require_once('../config/config.php');

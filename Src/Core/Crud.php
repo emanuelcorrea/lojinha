@@ -174,20 +174,16 @@ abstract class Crud extends Connection
         return $this->executeObject();
     }
 
-    public function update($data)
+    public function updateQuery()
     {
         try {
-            $this->setQuery(
-                "UPDATE products SET img = '{$data['img']}', nome = '{$data['nome']}', ingredientes = '{$data['ingredientes']}', categoria = '{$data['categoria']}', preparo = '{$data['preparo']}' WHERE id_receita = {$data['id']}"
-            );
-            
             $this->stmt = parent::conn()->prepare($this->getQuery());
             $this->stmt->execute();
 
             if ($this->stmt->rowCount() > 0) {
-                header("Location: ". DIR_PATH);
+                return $this->stmt->rowCount();
             } else {
-                $_SESSION['msg'] = "Erro.";
+                return null;
             }
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
@@ -195,60 +191,19 @@ abstract class Crud extends Connection
         }
     }
 
-    public function insert($data)
-    {
-        try {
-            $this->setQuery(
-                "INSERT INTO products (img, nome, ingredientes, categoria, preparo, cor, slug, dia, hora) VALUES ('{$data['img']}', '{$data['nome']}', '{$data['ingredientes']}', '{$data['categoria']}', '{$data['preparo']}', '{$data['cor']}', '{$data['slug']}', CURDATE(), CURTIME())"
-            );
-
-            $this->stmt = parent::conn()->prepare($this->getQuery());
-            $this->stmt->execute();
-
-            if ($this->stmt->rowCount() > 0) {
-                header("Location: " . DIR_PATH . "painel");
-            } else {
-                $_SESSION['msg'] = "Erro ao adicionar.";
-            }
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        }
-    }
-
-    public function delete($id)
-    {
-        try {
-            $this->setQuery(
-                "DELETE FROM {$this->table} WHERE id_{$this->table} = $id"
-            );
-
-            $this->stmt = parent::conn()->prepare($this->getQuery());
-            $this->stmt->execute();
-
-            if ($this->stmt->rowCount() > 0) {
-                header("Location: " . DIR_PATH . "painel");
-            } else {
-                false;
-            }
-        } catch (PDOException $e) {
-            echo "Error: " . $e->getMessage();
-            exit;
-        }
-    }
-
-    public function getQuery() {
+    protected function getQuery() {
         return $this->query;
     }
 
-    public function setQuery($query) {
+    protected function setQuery($query) {
         $this->query = $query;
     }
 
-    public function getStmt() {
+    protected function getStmt() {
         return $this->stmt;
     }
 
-    public function setStmt($stmt) {
+    protected function setStmt($stmt) {
         $this->stmt = $stmt;
     }
 
