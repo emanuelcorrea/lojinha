@@ -18,7 +18,8 @@ class Router
             '' => 'HomeController',
             'home' => 'HomeController',
             'galeria' => 'GaleriaController',
-            'produto' => 'ProductController'
+            'produto' => 'ProductController',
+            'dashboard' => 'DashboardController'
         );
 
         if (array_key_exists($i, $this->routes)) {
