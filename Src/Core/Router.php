@@ -15,8 +15,8 @@ class Router
         $i = $url[0];
 
         $this->routes = array(
-            '' => 'HomeController',
-            'home' => 'HomeController',
+            '' => 'CatalogController',
+            'home' => 'CatalogController',
             'galeria' => 'GaleriaController',
             'produto' => 'ProductController',
             'dashboard' => 'DashboardController'

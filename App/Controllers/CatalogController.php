@@ -3,20 +3,24 @@ namespace App\Controllers;
 
 use Src\Core\Render;
 use App\Models\CatalogModel;
+use App\Models\ProductModel;
 
-class HomeController extends Render
+class CatalogController extends Render
 {
     private $model;
+    protected $catalog;
 
     public function __construct()
     {
         $this->model = new CatalogModel();
+        $this->catalog = new CatalogModel();
+        $this->product = new ProductModel();
     }
     
     public function index()
     {
-        $this->setTitle('Home');
-        $this->setDir('home');
+        $this->setTitle('Página Inicial');
+        $this->setDir('catalog');
         $this->renderTemplate();
     }
 

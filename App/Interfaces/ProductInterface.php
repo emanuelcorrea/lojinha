@@ -7,6 +7,8 @@ interface ProductInterface
 
     const NAME = 'prodName';
 
+    const SLUG = 'prodSlug';
+
     const DESCRIPTION = 'prodDescription';
 
     const PRICE = 'prodPrice';
@@ -28,8 +30,10 @@ interface ProductInterface
     const ATTRIBUTES = [
         self::SKU,
         self::NAME,
+        self::SLUG,
         self::DESCRIPTION,
         self::PRICE,
+        self::PRICE_BEFORE,
         self::WEIGHT,
         self::STATUS,
         self::ATTRIBUTE_GROUP_ID,
@@ -44,6 +48,13 @@ interface ProductInterface
      * @return string
      */
     public function getName();
+
+    /**
+     * Get product slug
+     *
+     * @return string
+     */
+    public function getSlug();
 
     /**
      * Get attribute group id

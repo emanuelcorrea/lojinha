@@ -1,9 +1,9 @@
 <?php
 namespace App\Models;
 
-use Src\Core\Crud;
+use App\Models\Abstracts\AbstractCatalogModel;
 
-class CatalogModel extends Crud
+class CatalogModel extends AbstractCatalogModel
 {
     public function __construct()
     {
@@ -26,86 +26,9 @@ class CatalogModel extends Crud
         return $this->executeQuery();
     }
 
-    public function selectCamisas()
+    public function catalogListProducts($categories)
     {
-        
-        $this->setQuery("
-            SELECT prod.name as productName, 
-            prod.sku as prodSku,
-            prod.price as productPrice,
-            prod.price_before as productPriceBefore,
-            prod.slug as productSlug,
-            prod.rate as productRate,
-            sub.id_subcategory as subcatId,
-            sub.name as subcatName,
-            sub.id_category as subcatIdCategory,
-            sub.slug as subSlug,
-            cat.id_category as catId,
-            cat.name as catName,
-            cat.subcategory as catSub,
-            cat.slug as catSlug
-            FROM products as prod 
-            INNER JOIN products_subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
-            INNER JOIN products_categories as cat ON cat.id_category = sub.id_category 
-            WHERE prod.id_subcategory = 10 OR prod.id_subcategory = 30
-            ORDER BY id_product"
-        );
-
-        return $this->executeObject();
-    }
-
-    public function selectCalcas()
-    {
-        $this->setQuery(
-            "
-            SELECT prod.name as productName, 
-            prod.price as productPrice,
-            prod.price_before as productPriceBefore,
-            prod.slug as productSlug,
-            prod.rate as productRate,
-            sub.id_subcategory as subcatId,
-            sub.name as subcatName,
-            sub.id_category as subcatIdCategory,
-            sub.slug as subSlug,
-            cat.id_category as catId,
-            cat.name as catName,
-            cat.subcategory as catSub,
-            cat.slug as catSlug
-            FROM products as prod 
-            INNER JOIN products_subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
-            INNER JOIN products_categories as cat ON cat.id_category = sub.id_category 
-            WHERE prod.id_subcategory IN (28, 29, 13, 14, 16)
-            ORDER BY id_product"
-        );
-
-        return $this->executeObject();
-    }
-
-    public function selectCalcados()
-    {
-        $this->setQuery(
-            "
-            SELECT prod.name as productName, 
-            prod.price as productPrice,
-            prod.price_before as productPriceBefore,
-            prod.slug as productSlug,
-            prod.rate as productRate,
-            sub.id_subcategory as subcatId,
-            sub.name as subcatName,
-            sub.id_category as subcatIdCategory,
-            sub.slug as subSlug,
-            cat.id_category as catId,
-            cat.name as catName,
-            cat.subcategory as catSub,
-            cat.slug as catSlug
-            FROM products as prod 
-            INNER JOIN products_subcategories as sub ON sub.id_subcategory = prod.id_subcategory 
-            INNER JOIN products_categories as cat ON cat.id_category = sub.id_category 
-            WHERE prod.id_subcategory = 44 OR prod.id_subcategory = 53 OR prod.id_subcategory = 45 OR prod.id_subcategory = 5
-            ORDER BY id_product"
-        );
-
-        return $this->executeObject();
+        return $this->getProductsByCategories($categories);
     }
 
     public function selectNameByCat($id)

@@ -22,7 +22,7 @@ abstract class AbstractProductModel extends AbstractModel
                 prod.sku AS prodSku,
                 prod.description AS prodDescription,
                 prod.price AS prodPrice,
-                prod.price_before AS prodPricebefore,
+                prod.price_before AS prodPriceBefore,
                 prod.slug AS prodSlug,
                 prod.rate AS prodRate,
                 prod.status AS prodStatus,

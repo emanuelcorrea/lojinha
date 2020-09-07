@@ -26,12 +26,12 @@
         <div class="section-products">
             <div class="list-products">
                 <ul class="owl-carousel">
-                    <?php foreach ($this->getModel()->selectCamisas() as $produto) : $sub = $this->getModel()->selectNameByCat($produto->catSub)[0]['slug']; ?>
-                        <a href="<?php echo DIR_PATH . "produto/slug/" . $produto->productSlug; ?>" style="text-decoration: none;">
+                <?php foreach ($this->catalog->catalogListProducts([10, 30]) as $produto): $this->product->loadBy('sku', $produto->prodSku); ?>
+                        <a href="<?php echo DIR_PATH . "produto/slug/" . $this->product->getSlug(); ?>" style="text-decoration: none;">
                             <li>
                                 <article class="product">
                                     <div class="product-image">
-                                        <img src="<?php echo DIR_IMG . 'products/LJA000' . str_replace('-', '', $produto->prodSku) . '/LJA000' . str_replace('-', '', $produto->prodSku) . '_01.jpg'; ?>" width="300">
+                                        <img src="<?php echo $this->product->getImageByPosition(1); ?>" width="300">
                                     </div>
                                     <div class="loved">
                                         <i class="fas fa-heart"></i>
@@ -47,15 +47,15 @@
                                     </div>
                                     <header class="product-info">
                                         <div class="product-name">
-                                            <h3><?php echo $produto->productName; ?></h3>
+                                            <h3><?php echo $this->product->getName(); ?></h3>
                                         </div>
                                         <div class="product-price">
-                                            <?php if ($produto->productPriceBefore != 0) { ?>
-                                                <span><?php echo $produto->productPriceBefore; ?></span>
+                                            <?php if ($this->product->getPriceBefore() != 0) { ?>
+                                                <span><?php echo number_format($this->product->getPriceBefore(), 2, ',', '.') ?></span>
                                             <?php } ?>
-                                            <h4>R$ <?php echo number_format($produto->productPrice, 2, ',', '.') ?></h4>
+                                            <h4>R$ <?php echo number_format($this->product->getPrice(), 2, ',', '.') ?></h4>
                                         </div>
-                                        <span class="product-parcel">ou 1x de R$ <?php echo $produto->productPrice; ?></span>
+                                        <span class="product-parcel">ou 1x de R$ <?php echo number_format($this->product->getPrice(), 2, ',', '.') ?></span>
                                     </header>
                                 </article>
                             </li>
@@ -76,12 +76,12 @@
         <div class="section-products">
             <div class="list-products">
                 <ul class="owl-carousel">
-                    <?php foreach ($this->getModel()->selectCalcas() as $produto) : $sub = $this->getModel()->selectNameByCat($produto->catSub)[0]['slug']; ?>
-                        <a href="<?php echo DIR_PATH . "produto/slug/" . $produto->productSlug; ?>" style="text-decoration: none;">
+                    <?php foreach ($this->catalog->catalogListProducts([28, 29, 13, 14, 16]) as $produto): $this->product->loadBy('sku', $produto->prodSku); ?>
+                        <a href="<?php echo DIR_PATH . "produto/slug/" . $this->product->getSlug(); ?>" style="text-decoration: none;">
                             <li>
                                 <article class="product">
                                     <div class="product-image">
-                                        <img src="<?php echo DIR_IMG . 'products/LJA000' . str_replace('-', '', $produto->prodSku) . '/LJA000' . str_replace('-', '', $produto->prodSku) . '_01.jpg' ?>" width="300">
+                                        <img src="<?php echo $this->product->getImageByPosition(1); ?>" width="300">
                                     </div>
                                     <div class="loved">
                                         <i class="fas fa-heart"></i>
@@ -97,15 +97,15 @@
                                     </div>
                                     <header class="product-info">
                                         <div class="product-name">
-                                            <h3><?php echo $produto->productName; ?></h3>
+                                            <h3><?php echo $this->product->getName(); ?></h3>
                                         </div>
                                         <div class="product-price">
-                                            <?php if ($produto->productPriceBefore != 0) { ?>
-                                                <span><?php echo $produto->productPriceBefore; ?></span>
+                                            <?php if ($this->product->getPriceBefore() != 0) { ?>
+                                                <span><?php echo number_format($this->product->getPriceBefore(), 2, ',', '.') ?></span>
                                             <?php } ?>
-                                            <h4>R$ <?php echo number_format($produto->productPrice, 2, ',', '.') ?></h4>
+                                            <h4>R$ <?php echo number_format($this->product->getPrice(), 2, ',', '.') ?></h4>
                                         </div>
-                                        <span class="product-parcel">ou 1x de R$ <?php echo $produto->productPrice; ?></span>
+                                        <span class="product-parcel">ou 1x de R$ <?php echo number_format($this->product->getPrice(), 2, ',', '.') ?></span>
                                     </header>
                                 </article>
                             </li>
@@ -126,12 +126,12 @@
         <div class="section-products">
             <div class="list-products">
                 <ul class="owl-carousel">
-                    <?php foreach ($this->getModel()->selectCalcados() as $produto) : $sub = $this->getModel()->selectNameByCat($produto->catSub)[0]['slug']; ?>
-                        <a href="<?php echo DIR_PATH . "produto/slug/" . $produto->productSlug; ?>" style="text-decoration: none;">
+                <?php foreach ($this->catalog->catalogListProducts([5, 44, 45, 53]) as $key): $this->product->loadBy('sku', $produto->prodSku); ?>
+                        <a href="<?php echo DIR_PATH . "produto/slug/" . $this->product->getSlug(); ?>" style="text-decoration: none;">
                             <li>
                                 <article class="product">
                                     <div class="product-image">
-                                        <img src="<?php echo DIR_IMG . 'products/LJA000' . str_replace('-', '', $produto->prodSku) . '/LJA000' . str_replace('-', '', $produto->prodSku) . '_01.jpg' ?>" width="300">
+                                        <img src="<?php echo $this->product->getImageByPosition(1); ?>" width="300">
                                     </div>
                                     <div class="loved">
                                         <i class="fas fa-heart"></i>
@@ -147,15 +147,15 @@
                                     </div>
                                     <header class="product-info">
                                         <div class="product-name">
-                                            <h3><?php echo $produto->productName; ?></h3>
+                                            <h3><?php echo $this->product->getName(); ?></h3>
                                         </div>
                                         <div class="product-price">
-                                            <?php if ($produto->productPriceBefore != 0) { ?>
-                                                <span><?php echo $produto->productPriceBefore; ?></span>
+                                            <?php if ($this->product->getPriceBefore() != 0) { ?>
+                                                <span><?php echo number_format($this->product->getPriceBefore(), 2, ',', '.') ?></span>
                                             <?php } ?>
-                                            <h4>R$ <?php echo number_format($produto->productPrice, 2, ',', '.') ?></h4>
+                                            <h4>R$ <?php echo number_format($this->product->getPrice(), 2, ',', '.') ?></h4>
                                         </div>
-                                        <span class="product-parcel">ou 1x de R$ <?php echo $produto->productPrice; ?></span>
+                                        <span class="product-parcel">ou 1x de R$ <?php echo number_format($this->product->getPrice(), 2, ',', '.') ?></span>
                                     </header>
                                 </article>
                             </li>

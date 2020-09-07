@@ -19,6 +19,16 @@ class ProductModel extends AbstractProductModel implements
     }
 
     /**
+     * Get product slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->getData(self::SLUG);
+    }
+
+    /**
      * Get attribute group id
      *
      * @return int
