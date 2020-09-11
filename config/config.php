@@ -1,6 +1,7 @@
 <?php
 require_once('../Src/vendor/autoload.php');
 require_once('environment.php');
+require_once('routes.php');
 
 // Constantes de conexão com o banco de dados
 

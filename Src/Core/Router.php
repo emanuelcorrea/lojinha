@@ -12,6 +12,10 @@ class Router
     public function getRoute()
     {
         $url = $this->parserUrl();
+
+        echo "<pre>";
+        print_r($url);
+        echo "</pre>";
         $i = $url[0];
 
         $this->routes = array(
