@@ -27,7 +27,7 @@
             <div class="list-products">
                 <ul class="owl-carousel">
                 <?php foreach ($this->catalog->catalogListProducts([10, 30]) as $produto): $this->product->loadBy('sku', $produto->prodSku); ?>
-                        <a href="<?php echo DIR_PATH . "produto/slug/" . $this->product->getSlug(); ?>" style="text-decoration: none;">
+                        <a href="<?php echo DIR_PATH . $this->product->getSlug(); ?>" style="text-decoration: none;">
                             <li>
                                 <article class="product">
                                     <div class="product-image">
@@ -77,7 +77,7 @@
             <div class="list-products">
                 <ul class="owl-carousel">
                     <?php foreach ($this->catalog->catalogListProducts([28, 29, 13, 14, 16]) as $produto): $this->product->loadBy('sku', $produto->prodSku); ?>
-                        <a href="<?php echo DIR_PATH . "produto/slug/" . $this->product->getSlug(); ?>" style="text-decoration: none;">
+                        <a href="<?php echo DIR_PATH . $this->product->getSlug(); ?>" style="text-decoration: none;">
                             <li>
                                 <article class="product">
                                     <div class="product-image">
@@ -127,7 +127,7 @@
             <div class="list-products">
                 <ul class="owl-carousel">
                 <?php foreach ($this->catalog->catalogListProducts([5, 44, 45, 53]) as $key): $this->product->loadBy('sku', $produto->prodSku); ?>
-                        <a href="<?php echo DIR_PATH . "produto/slug/" . $this->product->getSlug(); ?>" style="text-decoration: none;">
+                        <a href="<?php echo DIR_PATH . $this->product->getSlug(); ?>" style="text-decoration: none;">
                             <li>
                                 <article class="product">
                                     <div class="product-image">
